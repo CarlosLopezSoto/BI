@@ -2,13 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TP1</Name>
-    <LastWriteTime>2021-05-28T23:35:13.9411956Z</LastWriteTime>
+    <LastWriteTime>2021-05-30T21:23:38.1186654Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2021-05-29T21:32:35.3386575Z</LastWriteTime>
+      <Name>DimensionBank.dtsx</Name>
+      <LastWriteTime>2021-05-30T21:10:04.6828278Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionDistrict.dtsx</Name>
+      <LastWriteTime>2021-05-30T21:23:38.0686968Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionRegion.dtsx</Name>
+      <LastWriteTime>2021-05-30T21:23:38.0557043Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
