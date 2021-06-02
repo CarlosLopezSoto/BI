@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimensionBank"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{BE5F4B7E-8BFA-4EF2-97C5-895D66B8A531}">
+  DTS:VersionBuild="62"
+  DTS:VersionGUID="{5B627A3A-17C1-4AD6-876F-32BDA9B6A56E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
