@@ -11,11 +11,47 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{6FAFC885-8A4A-4FCB-9D67-6E5B58D922E1}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{F5A6137F-8822-4C5D-A8C8-67A502D8E5AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{FC5492E0-7FF0-4681-8C4F-C91FF19C6844}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\new_client.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{DFE7A93A-C86F-4896-85EF-F4F52D7BA166}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\new_client.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{812AF884-406A-4830-A3E3-D492A87669F2}"
+      DTS:ObjectName="Administrador de conexiones con Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\new_client.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
       DTS:CreationName="FLATFILE"
@@ -304,6 +340,141 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[client_id]"
+                      cachedDataType="r8"
+                      cachedName="client_id"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[client_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[gender]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="gender"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[BirthDay]"
+                      cachedDataType="date"
+                      cachedName="BirthDay"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[BirthDay]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[BirthDay]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">BirthDay</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_STR,50,1252)#{Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[client_id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)clientId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Sex]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Sex]"
+                      name="Sex"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_STR,10,1252)#{Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[gender]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,10,1252)Gender</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Tarea Flujo de datos\Componente de script"
               componentClassID="Microsoft.ManagedComponentHost"
@@ -636,13 +807,8 @@ public class ScriptMain : UserComponent
     /// <param name="Row">The row that is currently passing through the component</param>
     public override void Entrada0_ProcessInputRow(Entrada0Buffer Row)
     {
-        int index = Row.issued.IndexOf(" ");
-        string data = Row.issued.Substring(0, index);
-        data = "19" + data;
-        Row.IssueDate = DateTime.ParseExact(data, "yyyyMMdd",null);
-        /*
-         * Add your code here
-         */
+        string data = "19" + Row.birthnumber.ToString();
+        Row.BirthDay = DateTime.ParseExact(data, "yyyyMMdd",null);
     }
 
 }
@@ -672,14 +838,14 @@ public class Entrada0Buffer: ScriptBuffer
     {
     }
 
-    public String issued
+    public Double birthnumber
     {
         get
         {
-            return Buffer.GetString(BufferColumnIndexes[0]);
+            return Buffer.GetDouble(BufferColumnIndexes[0]);
         }
     }
-    public bool issued_IsNull
+    public bool birthnumber_IsNull
     {
         get
         {
@@ -687,14 +853,14 @@ public class Entrada0Buffer: ScriptBuffer
         }
     }
 
-    public DateTime IssueDate
+    public DateTime BirthDay
     {
         set
         {
             this[1] = value;
         }
     }
-    public bool IssueDate_IsNull
+    public bool BirthDay_IsNull
     {
         set
         {
@@ -857,7 +1023,7 @@ namespace SC_576e75f6f7364925be709b6d253a7ec7.Properties {
     <msb:CodeName>SC_576e75f6f7364925be709b6d253a7ec7</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_576e75f6f7364925be709b6d253a7ec7</msb:DisplayName>
-    <msb:ProjectId>{AD075976-D159-4016-8421-3D4A8C8B68B9}</msb:ProjectId>
+    <msb:ProjectId>{AF979609-A222-47C8-A382-FEDE91E78E4B}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_576e75f6f7364925be709b6d253a7ec7.csproj" />
@@ -1004,97 +1170,97 @@ namespace SC_576e75f6f7364925be709b6d253a7ec7.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPnutmAAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAqjIA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGthuWAAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAjjIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAFgyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADwyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAsBIAAAAgAAAAFAAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAlBIAAAAgAAAAFAAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACM
-MgAAAAAAAEgAAAACAAUA6CEAALgPAAABAAAAAAAAAKAxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQAPgAAAAEAABEDbwYAAAZy
-AQAAcG8SAAAKCgNvBgAABhYGbxMAAAoLcgUAAHAHKBQAAAoLAwdyCwAAcBQoFQAACm8IAAAGKh4C
-KAwAAAYqKgIDBAUoFgAACipSAnsXAAAKAnsYAAAKFpRvGQAACioiAhYoGgAACio6AhcDjBEAAAEo
-GwAACipaAywIAhcoHAAACipyHQAAcHMdAAAKeh4CKB4AAAoqHgIoHwAACip+AiggAAAKAgJzEAAA
-Bn0BAAAEAgJzEQAABn0CAAAEKpIEctwAAHAabyEAAAosFQIFAgMoIgAACg4EcwUAAAZvDgAABipK
-KwcCA28PAAAGA28KAAAGLfEqBio6AigjAAAKAgN9AwAABCo6AigjAAAKAgN9BAAABCoeAigjAAAK
-Kq5+BQAABC0ecvAAAHDQBwAAAigkAAAKbyUAAApzJgAACoAFAAAEfgUAAAQqGn4GAAAEKh4CgAYA
-AAQqGn4HAAAEKh4CKCcAAAoqLnMXAAAGgAcAAAQqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
-AAAAAAUAbAAAAJAFAAAjfgAA/AUAAHgGAAAjU3RyaW5ncwAAAAB0DAAAZAEAACNVUwDYDQAAEAAA
-ACNHVUlEAAAA6A0AANABAAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+gEzABYAAAEAAAAhAAAA
-CAAAAAcAAAAYAAAADwAAACcAAAAQAAAAAQAAAAMAAAAHAAAACAAAAAEAAAAEAAAAAQAAAAAAIQMB
-AAAAAAAGAAYCmQQGAJoCmQQGAFIBhgQPAA0FAAAGAH8ByQMGAOkByQMGAMoByQMGAIECyQMGACYC
-yQMGAD8CyQMGAJYByQMGALEB3QIKAFoCkQAKAFgEkQAOAEkEkQAKABIEkQAGAIgAgQMKAOUFkQAG
-AKgFgQMGADUBhgQGAGkEuQQGAAYEtAMSAAUBCwMSAGYBCwMSAN8AnwMGABoBmQQGAPoCgQMGACoE
-gQMGANsDgQMGAPUDgQMGALIAgQMGAFoAgQMGAG4GyQMAAAAAJQAAAAAAAQABAAEAEACUAwAAEAAB
-AAEAAQAQADoEAAA5AAEABQABABAAxwUAAEkAAQAMAAEAEACKBQAATQADABAAAQAQAEsFAABNAAQA
-EQAAABAAwAQcBU0ABQASAAABEAB6BRwFZQAHABYABgCKBZUABgBLBZkAAQDVBZ0AAQDVBZ0AEQCI
-A6EAEQDPAKUAEQBKAKkAUCAAAAAAxgC4AgYAAQBYIAAAAADGAMMCBgABAGAgAAAAAMYASQatAAEA
-qiAAAAAAhhh5BAYAAgCyIAAAAACGGHkEOgACAL0gAAAAAIYIPwCzAAUA0iAAAAAAhghJA1wABQDb
-IAAAAACGCPcAtwAFAOogAAAAAIYIWwO9AAYAASEAAAAAhgBiBlwABwAJIQAAAACGAK8FXAAHABEh
-AAAAAIYYeQQGAAcAMSEAAAAAxgA8BsIABwBWIQAAAADGATMGrQALAGkhAAAAAMYBSQatAAwAayEA
-AAAAhhh5BMwADQB6IQAAAACGGHkEzAAOAIkhAAAAAIMYeQQGAA8AkSEAAAAAkwhlBNIADwC9IQAA
-AACTCLcA1wAPAMQhAAAAAJMIwwDcAA8AzCEAAAAAlgi7BeIAEADTIQAAAACGGHkEBgAQANshAAAA
-AJEYfwTnABAAAAABAGYGAAABAF4EAAACAFUFAAADACAEAAABAM8CAAABAM8CAAABAC4AAAACAH4A
-AAADAF4EAAAEACAEAAABAF4EAAABAGYGAAABAOsFAAABAOsFAAABAM8CCQB5BAEAEQB5BAYAGQB5
-BAoAKQB5BBAAMQB5BBAAOQB5BBAAQQB5BBAASQB5BBAAUQB5BBAAWQB5BBAAYQB5BBAAaQB5BAYA
-oQB5BAYAwQB5BBUA0QB5BAYAkQC4AgYAkQDDAgYA2QDVAiAA2QABAyUA2QCWBSsAiQCdBTEAcQB5
-BDoAcQBeBEQAcQBVBUgAeQD3AkwAcQBpA1EAcQB4A1YAcQBwAwEA6QB5BBAAcQBiBlwAcQCvBVwA
-kQB5BAYA2QCDBWAAkQBpBWcAmQB5BAYA+QBsAG0A+QBqBnUAqQB5BHsAyQB5BAYALgALAAcBLgAT
-ABABLgAbAC8BLgAjADgBLgArAGEBLgAzAGEBLgA7AGEBLgBDADgBLgBLAGcBLgBTAGEBLgBbAH4B
-QwBjAMgBqQBzAC8ByQBzAC8B4QB7AMgB4wBrAMgBGwADAAEABwAFAAgABwAAAEMA6wAAAE0D7wAA
-APsA8wAAAF8D7wAAAGkE+AAAANcA/QAAAL8FAgECAAYAAwACAAcABQABAAgABwABAAkACQACABMA
-CwACABQADQABABUADQACABYADwAEgAAAAQAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAAgwA2
-AAAAAAAPAAAAAAAAAAAAAACMAPUFAAAAAA8AAAAAAAAAAAAAAIwAEgYAAAAABAAAAAAAAAAAAAAA
-gwCBAwAAAAAAAAAAAQAAAMoEAAAAAAAAAFNDXzU3NmU3NWY2ZjczNjQ5MjViZTcwOWI2ZDI1M2E3
-ZWM3ADxNb2R1bGU+AElucHV0SUQAbXNjb3JsaWIAZ2V0X2lzc3VlZABkZWZhdWx0SW5zdGFuY2UA
-UnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAERhdGVUaW1lAE1p
-Y3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1
-cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAHNldF9Jc3N1ZURhdGUA
-RWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJO
-b25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0
-dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRl
-AFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUA
-QXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmli
-dXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBT
-U0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRy
-aWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0
-ZQB2YWx1ZQBJbmRleE9mAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAR2V0U3RyaW5nAFN1YnN0
-cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfNTc2ZTc1ZjZmNzM2NDkyNWJlNzA5YjZkMjUz
-YTdlYzcuZGxsAGdldF9pc3N1ZWRfSXNOdWxsAHNldF9Jc3N1ZURhdGVfSXNOdWxsAFNldE51bGwA
-c2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRp
-b24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlv
-bkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0
-cHV0TWFwAElGb3JtYXRQcm92aWRlcgBFbnRyYWRhMEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBTY3Jp
-cHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0
-aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ181
-NzZlNzVmNmY3MzY0OTI1YmU3MDliNmQyNTNhN2VjNy5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNv
-dXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNTc2ZTc1ZjZmNzM2NDkyNWJlNzA5YjZkMjUzYTdlYzcu
-UHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVz
-AFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBDb25jYXQAUGFyc2VFeGFjdABPYmplY3QARW5k
-T2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0
-Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZl
-ci5QaXBlbGluZUhvc3QARW50cmFkYTBfUHJvY2Vzc0lucHV0AEVudHJhZGEwX1Byb2Nlc3NJbnB1
-dFJvdwBOZXh0Um93AGdldF9Bc3NlbWJseQAAAAMgAAAFMQA5AAAReQB5AHkAeQBNAE0AZABkAACA
-vUwAYQAgAHAAcgBvAHAAaQBlAGQAYQBkACAASQBzAE4AdQBsAGwAIABuAG8AIABwAHUAZQBkAGUA
-IABlAHMAdABhAGIAbABlAGMAZQByAHMAZQAgAGUAbgAgAEYAYQBsAHMAZQAuACAARQBuACAAcwB1
-ACAAbAB1AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBsAG8AcgAgAGEAIABsAGEA
-IABjAG8AbAB1AG0AbgBhAC4AABNFAG4AdAByAGEAZABhACAAMAAAcVMAQwBfADUANwA2AGUANwA1
-AGYANgBmADcAMwA2ADQAOQAyADUAYgBlADcAMAA5AGIANgBkADIANQAzAGEANwBlAGMANwAuAFAA
-cgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAAeQHeU6a9KToTCRCrp3VkS
-AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdBAcCCA4EIAEIDgUgAg4ICAUAAg4ODggAAxFFDg4S
-cQkgAwESPR0IEkEDBhI9AwYdCAQgAQ4IBCABAggFIAIBCBwDIAACBiACAg4ReQUgAR0ICAcAARJ9
-EYCBBSAAEoCFByACAQ4SgIUIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkkDBhJVAwYSWQMG
-EiAFIAEBEgwDIAAOBSABARFFBCABAQIJIAQBCA4SPRJBBSABARJJBAAAElUEAAASWQUAAQESWQQA
-ABIgAwAAAQMoAA4DKAACBCgAEUUECAASVQQIABJZBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBO
-b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzU3NmU3NWY2ZjczNjQ5MjViZTcwOWI2
-ZDI1M2E3ZWM3AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3Jr
-LFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43
-BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIs
-IG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9r
-ZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIA
-AAAAAAAAAAAAAFBBRFBBRFC0AAAAgDIAAAAAAAAAAAAAmjIAAAAgAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAIwyAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABw
+MgAAAAAAAEgAAAACAAUA2CEAAKwPAAABAAAAAAAAAIQxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQALAAAAAEAABFyAQAAcANv
+BgAABgsSASgSAAAKKBMAAAoKAwZyBwAAcBQoFAAACm8IAAAGKh4CKAwAAAYqKgIDBAUoFQAACipS
+AnsWAAAKAnsXAAAKFpRvGAAACioiAhYoGQAACio6AhcDjBEAAAEoGgAACipaAywIAhcoGwAACipy
+GQAAcHMcAAAKeh4CKB0AAAoqHgIoHgAACip+AigfAAAKAgJzEAAABn0BAAAEAgJzEQAABn0CAAAE
+KpIEctgAAHAabyAAAAosFQIFAgMoIQAACg4EcwUAAAZvDgAABipKKwcCA28PAAAGA28KAAAGLfEq
+Bio6AigiAAAKAgN9AwAABCo6AigiAAAKAgN9BAAABCoeAigiAAAKKq5+BQAABC0ecuwAAHDQBwAA
+AigjAAAKbyQAAApzJQAACoAFAAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqGn4HAAAEKh4CKCYAAAoq
+LnMXAAAGgAcAAAQqAAAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAkAUAACN+
+AAD8BQAAeAYAACNTdHJpbmdzAAAAAHQMAABgAQAAI1VTANQNAAAQAAAAI0dVSUQAAADkDQAAyAEA
+ACNCbG9iAAAAAAAAAAIAAAFXFaIBCQEAAAD6ATMAFgAAAQAAACIAAAAIAAAABwAAABgAAAAPAAAA
+JgAAABAAAAABAAAAAwAAAAcAAAAIAAAAAQAAAAQAAAABAAAAAAD/AgEAAAAAAAYA9wGLBAYAiwKL
+BAYAQwF4BA8A/wQAAAYAcAGrAwYA2gGrAwYAuwGrAwYAcgKrAwYAFwKrAwYAMAKrAwYAhwGrAwYA
+ogHGAgoASwKQAAoASgSQAA4AOwSQAAoA9AOQAAYAhwBjAwoA1wWQAAYAmgVjAwYAJgF4BAYAWwSr
+BAYA6AOWAxIA9gDpAhIAVwHpAhIA3gCBAwYACwGLBAYAUgBjAwYA4gJjAwYAHARjAwYAvQNjAwYA
+1wNjAwYAsQBjAwYAWQBjAwYAbQarAwAAAAAlAAAAAAABAAEAAQAQAHYDAAAQAAEAAQABABAALAQA
+ADkAAQAFAAEAEAC5BQAASQABAAwAAQAQAHwFAABNAAMAEAABABAAPQUAAE0ABAARAAAAEACyBA4F
+TQAFABIAAAEQAGwFDgVlAAcAFgAGAHwFjwAGAD0FkwABAMcFlwABAMcFlwARAGoDmwARAM4AnwAR
+AD8AowBQIAAAAADGAKkCBgABAFggAAAAAMYAtAIGAAEAYCAAAAAAxgA7BqcAAQCYIAAAAACGGGsE
+BgACAKAgAAAAAIYYawQzAAIAqyAAAAAAhggMBK0ABQDAIAAAAACGCCcDVQAFAMkgAAAAAIYIXAax
+AAUA2CAAAAAAhgg+A7cABgDvIAAAAACGAFQGVQAHAPcgAAAAAIYAoQVVAAcA/yAAAAAAhhhrBAYA
+BwAfIQAAAADGAC4GvAAHAEQhAAAAAMYBJQanAAsAVyEAAAAAxgE7BqcADABZIQAAAACGGGsExgAN
+AGghAAAAAIYYawTGAA4AdyEAAAAAgxhrBAYADwB/IQAAAACTCFcEzAAPAKshAAAAAJMItgDRAA8A
+siEAAAAAkwjCANYADwC6IQAAAACWCK0F3AAQAMEhAAAAAIYYawQGABAAySEAAAAAkRhxBOEAEAAA
+AAEAWAYAAAEAUAQAAAIARwUAAAMAAgQAAAEAwAIAAAEAwAIAAAEALgAAAAIAfQAAAAMAUAQAAAQA
+AgQAAAEAUAQAAAEAWAYAAAEA3QUAAAEA3QUAAAEAwAIJAGsEAQARAGsEBgAZAGsECgApAGsEEAAx
+AGsEEAA5AGsEEABBAGsEEABJAGsEEABRAGsEEABZAGsEEABhAGsEEABpAGsEBgChAGsEBgDBAGsE
+FQDRAGsEBgCRAKkCBgCRALQCBgDZAOACIADhAIgFJACJAI8FKgBxAGsEMwBxAFAEPQBxAEcFQQB5
+AE8ARQBxAEsDSgBxAFoDTwBxAFIDAQDxAGsEEABxAFQGVQBxAKEFVQCRAGsEBgDhAHUFWQCRAFsF
+YACZAGsEBgABAWsAZgABAWkGbwCpAGsEdQDJAGsEBgAuAAsAAQEuABMACgEuABsAKQEuACMAMgEu
+ACsAWwEuADMAWwEuADsAWwEuAEMAMgEuAEsAYQEuAFMAWwEuAFsAeAFDAGMAwgGpAHMAKQHJAHMA
+KQHhAHsAwgHjAGsAwgEbAAMAAQAHAAUACAAHAAAAEATlAAAAKwPpAAAAYAbtAAAAQgPpAAAAWwTy
+AAAA1gD3AAAAsQX8AAIABgADAAIABwAFAAEACAAHAAEACQAJAAIAEwALAAIAFAANAAEAFQANAAIA
+FgAPAASAAAABAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAAAAB9ADYAAAAAAA8AAAAAAAAAAAAA
+AIYA5wUAAAAADwAAAAAAAAAAAAAAhgAEBgAAAAAEAAAAAAAAAAAAAAB9AGMDAAAAAAAAAAABAAAA
+vAQAAAAAAAAAU0NfNTc2ZTc1ZjZmNzM2NDkyNWJlNzA5YjZkMjUzYTdlYzcAPE1vZHVsZT4ASW5w
+dXRJRABtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAR2V0RG91YmxlAFJ1bnRpbWVUeXBlSGFuZGxl
+AEdldFR5cGVGcm9tSGFuZGxlAElucHV0TmFtZQBEYXRlVGltZQBNaWNyb3NvZnQuU3FsU2VydmVy
+LkR0cy5QaXBlbGluZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVy
+ZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdl
+bmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVB
+dHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUA
+QXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2Vt
+Ymx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENv
+bXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFz
+c2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0
+cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJp
+YnV0ZQBQcmVFeGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25p
+bmcAVG9TdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzU3NmU3NWY2ZjczNjQ5MjViZTcw
+OWI2ZDI1M2E3ZWM3LmRsbABnZXRfYmlydGhudW1iZXJfSXNOdWxsAHNldF9CaXJ0aERheV9Jc051
+bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0u
+Q29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZh
+bGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0
+TmFtZU1hcABPdXRwdXRNYXAAZ2V0X2JpcnRobnVtYmVyAElGb3JtYXRQcm92aWRlcgBFbnRyYWRh
+MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAu
+Y3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2Vy
+dmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ181NzZlNzVmNmY3MzY0OTI1YmU3MDliNmQyNTNhN2Vj
+Ny5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNTc2ZTc1
+ZjZmNzM2NDkyNWJlNzA5YjZkMjUzYTdlYzcuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29s
+dW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBD
+b25jYXQAUGFyc2VFeGFjdABPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBv
+bmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
+VHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QARW50cmFkYTBfUHJvY2Vz
+c0lucHV0AEVudHJhZGEwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AHNldF9CaXJ0aERheQBnZXRf
+QXNzZW1ibHkAAAAABTEAOQAAEXkAeQB5AHkATQBNAGQAZAAAgL1MAGEAIABwAHIAbwBwAGkAZQBk
+AGEAZAAgAEkAcwBOAHUAbABsACAAbgBvACAAcAB1AGUAZABlACAAZQBzAHQAYQBiAGwAZQBjAGUA
+cgBzAGUAIABlAG4AIABGAGEAbABzAGUALgAgAEUAbgAgAHMAdQAgAGwAdQBnAGEAcgAsACAAYQBz
+AGkAZwBuAGUAIAB1AG4AIAB2AGEAbABvAHIAIABhACAAbABhACAAYwBvAGwAdQBtAG4AYQAuAAAT
+RQBuAHQAcgBhAGQAYQAgADAAAHFTAEMAXwA1ADcANgBlADcANQBmADYAZgA3ADMANgA0ADkAMgA1
+AGIAZQA3ADAAOQBiADYAZAAyADUAMwBhADcAZQBjADcALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4A
+UgBlAHMAbwB1AHIAYwBlAHMAAAAAjYIRYHTHME+PRSwfsOlhvAAEIAEBCAMgAAEFIAEBEREEIAEB
+DgUgAQERXQQHAg4NAyAADgUAAg4ODggAAxFFDg4SdQkgAwESPR0IEkEDBhI9AwYdCAQgAQ0IBCAB
+AggFIAIBCBwDIAACBiACAg4RfQUgAR0ICAgAARKAgRGAhQUgABKAiQcgAgEOEoCJCLd6XFYZNOCJ
+CImEXc2AgMyRAwYSFAMGEhgDBhJJAwYSVQMGElkDBhIgBSABARIMAyAADQUgAQERRQQgAQECCSAE
+AQgOEj0SQQUgAQESSQQAABJVBAAAElkFAAEBElkEAAASIAMAAAEDKAANAygAAgQoABFFBAgAElUE
+CAASWQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAA
+ACgBACNTQ181NzZlNzVmNmY3MzY0OTI1YmU3MDliNmQyNTNhN2VjNwAABQEAAAAAFgEAEUNvcHly
+aWdodCBAICAyMDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29y
+a0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAALQAAADOyu++AQAAAJEAAABsU3lz
+dGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwg
+Q3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5S
+ZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABkMgAAAAAA
+AAAAAAB+MgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcDIAAAAAAAAAAAAAAABfQ29yRGxsTWFp
+bgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1127,7 +1293,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAArDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAkDIAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1172,7 +1338,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Suma de comprobación para comparar los metadatos del componente con los códigos compilados."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">B7</property>
+                  typeConverter="NOTBROWSABLE">77</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -1184,12 +1350,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Entrada 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0].Columns[&quot;issued&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;issued&quot;"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;issued&quot;]" />
+                      refId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0].Columns[birth_number]"
+                      cachedDataType="r8"
+                      cachedName="birth_number"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[birth_number]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1201,10 +1365,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   synchronousInputId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[IssueDate]"
+                      refId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[BirthDay]"
                       dataType="date"
-                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[IssueDate]"
-                      name="IssueDate" />
+                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[BirthDay]"
+                      name="BirthDay" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1226,7 +1390,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[DimensionCard]</property>
+                  name="OpenRowset">[dbo].[DimensionCustommer]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -1283,52 +1447,46 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;type&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;type&quot;"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;type&quot;]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;card_id&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;card_id&quot;"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CardID]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;card_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[IssueDate]"
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[BirthDay]"
                       cachedDataType="date"
-                      cachedName="IssueDate"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsseDate]"
-                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[IssueDate]" />
+                      cachedName="BirthDay"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[BirthNumber]"
+                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[BirthDay]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustommerID]"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Sex]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Sex"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Sex]"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Sex]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[BirthNumber]"
+                      dataType="dbTimeStamp"
+                      name="BirthNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustommerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustommerID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Sex]"
                       codePage="1252"
                       dataType="str"
                       length="10"
-                      name="Type" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CardID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CardID" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsseDate]"
-                      dataType="dbTimeStamp"
-                      name="IsseDate" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AccountID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="AccountID" />
+                      name="Sex" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1358,153 +1516,182 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Origen de archivo plano"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Origen de archivo plano"
-              localeId="3082"
-              name="Origen de archivo plano"
+              refId="Package\Tarea Flujo de datos\Origen de Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Origen de Excel"
               usesDispositions="true"
               version="1">
               <properties>
                 <property
-                  dataType="System.Boolean"
-                  description="Especifica si las columnas de longitud cero se tratan como NULL."
-                  name="RetainNulls">false</property>
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
-                  name="FileNameColumnName"></property>
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">client$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Card]"
-                  connectionManagerRefId="Package.ConnectionManagers[Card]"
-                  name="FlatFileConnection" />
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
-                  name="Salida de origen de archivo plano">
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;type&quot;]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[client_id]"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;type&quot;]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;type&quot;]"
-                      name="&quot;type&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[client_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[client_id]"
+                      name="client_id"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;issued&quot;]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[birth_number]"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;issued&quot;]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;issued&quot;]"
-                      name="&quot;issued&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[birth_number]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[birth_number]"
+                      name="birth_number"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;card_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[gender]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;card_id&quot;]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[&quot;card_id&quot;]"
-                      name="&quot;card_id&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[gender]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[age]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[age]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[age]"
+                      name="age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[age_levels]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[age_levels]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[age_levels]"
+                      name="age_levels"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;card_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;card_id&quot;" />
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[F1]"
+                      dataType="r8"
+                      name="F1" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;disp_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;disp_id&quot;" />
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[client_id]"
+                      dataType="r8"
+                      name="client_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;type&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;type&quot;" />
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[birth_number]"
+                      dataType="r8"
+                      name="birth_number" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;issued&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;issued&quot;" />
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[district_id]"
+                      dataType="r8"
+                      name="district_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[age]"
+                      dataType="r8"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[age_levels]"
+                      dataType="wstr"
+                      length="255"
+                      name="age_levels" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel]"
                   isErrorOut="true"
-                  name="Salida de error de origen de archivo plano">
+                  name="Salida de error de origen de Excel">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Columna de salida de error de origen de archivo plano"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
-                      name="Columna de salida de error de origen de archivo plano" />
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[client_id]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[client_id]"
+                      name="client_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[birth_number]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[birth_number]"
+                      name="birth_number" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[gender]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[gender]"
+                      name="gender" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[age]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[age]"
+                      name="age" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[age_levels]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[age_levels]"
+                      name="age_levels" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1516,14 +1703,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida 0]"
-              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida 0"
               startId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
               endId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]"
-              name="Salida de origen de archivo plano"
-              startId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+              name="Salida de origen de Excel"
+              startId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1554,27 +1746,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="196,42"
-          Id="Package\Tarea Flujo de datos\Origen de archivo plano"
-          TopLeft="454,69" />
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
+          TopLeft="485,258" />
         <NodeLayout
           Size="186,42"
           Id="Package\Tarea Flujo de datos\Componente de script"
-          TopLeft="460,159" />
+          TopLeft="475,112" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Tarea Flujo de datos\Columna derivada"
+          TopLeft="485,182" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Tarea Flujo de datos\Origen de Excel"
+          TopLeft="496,39" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-          TopLeft="552.5,111">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+          TopLeft="571.25,81">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48"
+              EndConnector="0,31"
               Start="0,0"
-              End="0,40.5">
+              End="0,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.5" />
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1583,24 +1783,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
-          TopLeft="467,259" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
-          TopLeft="553.75,201">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          TopLeft="570.75,224">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="0,34"
               Start="0,0"
-              End="0,50.5">
+              End="0,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
+          TopLeft="568.5,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1614,6 +1832,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de Excel">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
