@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{A9136E5F-A7FC-4C0E-8441-9A2D03FEC545}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{BA295C9C-1AF8-46B9-A3FD-F7CBD5C173EE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1535,22 +1535,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         <NodeLayout
           Size="114,42"
           Id="Package\Tarea Flujo de datos\Region"
-          TopLeft="561,200" />
+          TopLeft="410,43" />
         <NodeLayout
           Size="123,42"
           Id="Package\Tarea Flujo de datos\Get Guid"
-          TopLeft="584,363" />
+          TopLeft="433,206" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\GROUP BY Region"
-          TopLeft="595,298" />
+          TopLeft="444,141" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Destino de OLE DB"
-          TopLeft="582,443" />
+          TopLeft="431,286" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-          TopLeft="618,242">
+          TopLeft="467,85">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1584,7 +1584,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
-          TopLeft="682.5,340">
+          TopLeft="531.5,183">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1618,7 +1618,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
-          TopLeft="645.5,405">
+          TopLeft="494.5,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

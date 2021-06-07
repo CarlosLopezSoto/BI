@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{E8B3DC9A-485E-4300-8EFC-16E53D9D026E}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{0B59413E-7DC4-4911-B5A9-D7D33E10B032}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,10 +29,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Lan]"
+      DTS:refId="Package.ConnectionManagers[Loan]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{9D6563BD-477C-4B50-9D5A-EF41D98B8862}"
-      DTS:ObjectName="Lan">
+      DTS:ObjectName="Loan">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -111,61 +111,6 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[test]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{363FE76D-041F-4925-BA96-38FA73B1EFB7}"
-      DTS:ObjectName="test">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\TEST2.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Columna 0"
-              DTS:DTSID="{591982CE-C5AF-4F8E-8773-B21B4D81BFFD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Columna 1"
-              DTS:DTSID="{793E5858-D094-4477-8BB0-6D69FD5402DC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Columna 2"
-              DTS:DTSID="{DB7400CB-7F60-4092-9E8C-992167F657B2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Columna 3"
-              DTS:DTSID="{DE87A2A5-74B0-48C9-A5EF-0480194C790D}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -184,267 +129,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Tarea Flujo de datos\Agregado"
-              componentClassID="Microsoft.Aggregate"
-              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
-              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
-              name="Agregado"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
-                  name="KeyScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
-                  name="Keys" />
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
-                  name="CountDistinctScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
-                  name="CountDistinctKeys" />
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
-                  name="AutoExtendFactor">25</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
-                  name="Entrada de agregado 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[duration]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="duration"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[duration]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="status"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[status]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]"
-                  name="Salida de agregado 1">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
-                      name="KeyScale"
-                      typeConverter="KeyScaleType">0</property>
-                    <property
-                      dataType="System.Null"
-                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
-                      name="Keys" />
-                  </properties>
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[duration]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[duration]"
-                      name="duration">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el id. de la columna de entrada usada en la agregación."
-                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[duration]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el tipo de agregación."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación de cadenas."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[status]"
-                      name="status">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el id. de la columna de entrada usada en la agregación."
-                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[status]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el tipo de agregación."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación de cadenas."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Columna derivada"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
-              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
-              name="Columna derivada"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
-                  description="Entrada en la transformación Columna derivada"
-                  name="Entrada de columna derivada">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[duration]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="duration"
-                      errorOrTruncationOperation="Cálculo"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[duration]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión de columna derivada"
-                          name="Expression">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[duration]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión descriptiva de columna derivada"
-                          expressionType="Notify"
-                          name="FriendlyExpression">duration</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="status"
-                      errorOrTruncationOperation="Cálculo"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[status]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión de columna derivada"
-                          name="Expression">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[status]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión descriptiva de columna derivada"
-                          expressionType="Notify"
-                          name="FriendlyExpression">status</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]"
-                  description="Salida predeterminada de la transformación Columna derivada"
-                  exclusionGroup="1"
-                  name="Salida de columna derivada"
-                  synchronousInputId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[DateFrom]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Cálculo"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[DateFrom]"
-                      name="DateFrom"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión de columna derivada"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión descriptiva de columna derivada"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada]"
-                  description="Salida de error de la transformación Columna derivada"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de columna derivada"
-                  synchronousInputId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Componente de script"
+              refId="Package\Tarea Flujo de datos\Add guid"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;12"
               description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
-              name="Componente de script"
+              name="Add guid"
               version="12">
               <properties>
                 <property
@@ -1285,7 +974,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]"
+                  refId="Package\Tarea Flujo de datos\Add guid.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
                   <externalMetadataColumns />
@@ -1293,14 +982,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0]"
+                  refId="Package\Tarea Flujo de datos\Add guid.Outputs[Salida 0]"
                   name="Salida 0"
-                  synchronousInputId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Add guid.Inputs[Entrada 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[Guid]"
+                      refId="Package\Tarea Flujo de datos\Add guid.Outputs[Salida 0].Columns[Guid]"
                       dataType="guid"
-                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[Guid]"
+                      lineageId="Package\Tarea Flujo de datos\Add guid.Outputs[Salida 0].Columns[Guid]"
                       name="Guid" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1308,11 +997,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Destino de OLE DB"
+              refId="Package\Tarea Flujo de datos\DimensionLoanDetail"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Destino de OLE DB"
+              name="DimensionLoanDetail"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1365,7 +1054,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[desktop-kgsm30p.TP11]"
                   connectionManagerRefId="Package.ConnectionManagers[desktop-kgsm30p.TP11]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -1373,65 +1062,65 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[duration]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].Columns[duration]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="duration"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Duration]"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[duration]" />
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[Duration]"
+                      lineageId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[duration]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[status]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].Columns[status]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="status"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Status]"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[status]" />
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[Status]"
+                      lineageId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[status]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[DateFrom]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].Columns[DateFrom]"
                       cachedDataType="dbTimeStamp"
                       cachedName="DateFrom"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
-                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[DateFrom]" />
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
+                      lineageId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de columna derivada].Columns[DateFrom]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Guid]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].Columns[Guid]"
                       cachedDataType="guid"
                       cachedName="Guid"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanDetailID]"
-                      lineageId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0].Columns[Guid]" />
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanDetailID]"
+                      lineageId="Package\Tarea Flujo de datos\Add guid.Outputs[Salida 0].Columns[Guid]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Status]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[Status]"
                       codePage="1252"
                       dataType="str"
                       length="1"
                       name="Status" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanDetailID]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanDetailID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="LoanDetailID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateTO]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateTO]"
                       dataType="dbTimeStamp"
                       name="DateTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
                       dataType="dbTimeStamp"
                       name="DateFROM" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Duration]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB].ExternalColumns[Duration]"
                       dataType="i4"
                       name="Duration" />
                   </externalMetadataColumns>
@@ -1439,22 +1128,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\DimensionLoanDetail.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\DimensionLoanDetail.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\DimensionLoanDetail.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1463,12 +1152,268 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Origen de archivo plano"
+              refId="Package\Tarea Flujo de datos\Get Date"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Get Date"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Get Date.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Get Date.Inputs[Entrada de columna derivada].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="duration"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[duration]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[duration]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">duration</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Get Date.Inputs[Entrada de columna derivada].Columns[status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="status"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[status]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[status]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">status</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Tarea Flujo de datos\Get Date.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de columna derivada].Columns[DateFrom]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de columna derivada].Columns[DateFrom]"
+                      name="DateFrom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Tarea Flujo de datos\Get Date.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Group by duration and status"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Group by duration and status"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Group by duration and status.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Group by duration and status.Inputs[Entrada de agregado 1].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="duration"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[duration]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Group by duration and status.Inputs[Entrada de agregado 1].Columns[status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="status"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[status]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[duration]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1].Columns[status]"
+                      name="status">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[status]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Loan"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Origen de archivo plano"
               localeId="3082"
-              name="Origen de archivo plano"
+              name="Loan"
               usesDispositions="true"
               version="1">
               <properties>
@@ -1483,25 +1428,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Lan]"
-                  connectionManagerRefId="Package.ConnectionManagers[Lan]"
+                  refId="Package\Tarea Flujo de datos\Loan.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Loan]"
+                  connectionManagerRefId="Package.ConnectionManagers[Loan]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+                  refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano]"
                   name="Salida de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[duration]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[duration]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[duration]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[duration]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[duration]"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[duration]"
                       name="duration"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1516,14 +1461,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[status]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[status]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[status]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[status]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[status]"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].Columns[status]"
                       name="status"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1541,43 +1486,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[loan_id]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[loan_id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="loan_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[account_id]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[account_id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="account_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[date]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[date]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="date" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="amount" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[duration]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[duration]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="duration" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[payments]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[payments]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="payments" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[status]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano].ExternalColumns[status]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1585,27 +1530,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                  refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano]"
                   isErrorOut="true"
                   name="Salida de error de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       codePage="1252"
                       dataType="text"
                       description="Columna de salida de error de origen de archivo plano"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       name="Columna de salida de error de origen de archivo plano" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1617,24 +1562,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           <paths>
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida 0]"
-              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Tarea Flujo de datos\DimensionLoanDetail.Inputs[Entrada de destino de OLE DB]"
               name="Salida 0"
-              startId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0]" />
+              startId="Package\Tarea Flujo de datos\Add guid.Outputs[Salida 0]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
-              endId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
+              endId="Package\Tarea Flujo de datos\Get Date.Inputs[Entrada de columna derivada]"
               name="Salida de agregado 1"
-              startId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]" />
+              startId="Package\Tarea Flujo de datos\Group by duration and status.Outputs[Salida de agregado 1]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-              endId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]"
+              endId="Package\Tarea Flujo de datos\Add guid.Inputs[Entrada 0]"
               name="Salida de columna derivada"
-              startId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]" />
+              startId="Package\Tarea Flujo de datos\Get Date.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-              endId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
+              endId="Package\Tarea Flujo de datos\Group by duration and status.Inputs[Entrada de agregado 1]"
               name="Salida de origen de archivo plano"
-              startId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+              startId="Package\Tarea Flujo de datos\Loan.Outputs[Salida de origen de archivo plano]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1655,7 +1600,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         <NodeLayout
           Size="180,42"
           Id="Package\Tarea Flujo de datos"
-          TopLeft="342,112" />
+          TopLeft="342,111.133333326446" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1665,57 +1610,51 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="196,42"
-          Id="Package\Tarea Flujo de datos\Origen de archivo plano"
+          Size="103,42"
+          Id="Package\Tarea Flujo de datos\Loan"
           TopLeft="424,20" />
         <NodeLayout
-          Size="127,42"
-          Id="Package\Tarea Flujo de datos\Agregado"
-          TopLeft="459,97" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-          TopLeft="522.25,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="123,42"
+          Id="Package\Tarea Flujo de datos\Get Date"
+          TopLeft="433,168" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Tarea Flujo de datos\Componente de script"
+          Size="122,42"
+          Id="Package\Tarea Flujo de datos\Add guid"
           TopLeft="443,266" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Tarea Flujo de datos\Columna derivada"
-          TopLeft="433,168" />
+          Size="220,42"
+          Id="Package\Tarea Flujo de datos\Group by duration and status"
+          TopLeft="381,89" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Tarea Flujo de datos\DimensionLoanDetail"
+          TopLeft="447,353" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
-          TopLeft="519.75,139">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+          TopLeft="475.5,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29"
+              EndConnector="15.5,27"
               Start="0,0"
-              End="0,21.5">
+              End="15.5,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.5" />
+                    End="0,9.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.5"
+                    Point2="0,13.5"
+                    Point3="4,13.5" />
+                  <mssgle:LineSegment
+                    End="11.5,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,13.5"
+                    Point2="15.5,13.5"
+                    Point3="15.5,17.5" />
+                  <mssgle:LineSegment
+                    End="15.5,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1726,13 +1665,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="517,210">
+          TopLeft="494.5,210">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19,56"
+              EndConnector="9.5,56"
               Start="0,0"
-              End="19,48.5">
+              End="9.5,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1743,13 +1682,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     Point2="0,28"
                     Point3="4,28" />
                   <mssgle:LineSegment
-                    End="15,28" />
+                    End="5.5,28" />
                   <mssgle:CubicBezierSegment
-                    Point1="15,28"
-                    Point2="19,28"
-                    Point3="19,32" />
+                    Point1="5.5,28"
+                    Point2="9.5,28"
+                    Point3="9.5,32" />
                   <mssgle:LineSegment
-                    End="19,48.5" />
+                    End="9.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1758,24 +1697,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
-          TopLeft="447,353" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
-          TopLeft="535.25,308">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
+          TopLeft="492.75,131">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45"
+              EndConnector="0,37"
               Start="0,0"
-              End="0,37.5">
+              End="0,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
+          TopLeft="504,308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35,45"
+              Start="0,0"
+              End="35,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="31,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31,22.5"
+                    Point2="35,22.5"
+                    Point3="35,26.5" />
+                  <mssgle:LineSegment
+                    End="35,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1788,7 +1757,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
+    design-time-name="Package\Tarea Flujo de datos\DimensionLoanDetail">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
