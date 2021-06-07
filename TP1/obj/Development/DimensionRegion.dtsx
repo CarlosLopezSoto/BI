@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{883DD045-16CC-42AC-A327-B8796D0AC6AE}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{BA295C9C-1AF8-46B9-A3FD-F7CBD5C173EE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -291,9 +291,7 @@
                       lineageId="Package\Tarea Flujo de datos\GROUP BY Region.Outputs[Salida de agregado 1].Columns[Region]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Guid]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="guid"
                       cachedName="Guid"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[RegionID]"
                       lineageId="Package\Tarea Flujo de datos\Get Guid.Outputs[Salida 0].Columns[Guid]" />
@@ -704,26 +702,11 @@ public class Entrada0Buffer: ScriptBuffer
     {
     }
 
-    public String Region
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[0]);
-        }
-    }
-    public bool Region_IsNull
-    {
-        get
-        {
-            return IsNull(0);
-        }
-    }
-
-    public String Guid
+    public Guid Guid
     {
         set
         {
-            this[1] = value;
+            this[0] = value;
         }
     }
     public bool Guid_IsNull
@@ -732,7 +715,7 @@ public class Entrada0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(1);
+                SetNull(0);
             }
             else
             {
@@ -889,7 +872,7 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
     <msb:CodeName>SC_725baf467f8f45a6b500fbc6ebf94eea</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_725baf467f8f45a6b500fbc6ebf94eea</msb:DisplayName>
-    <msb:ProjectId>{CA91A079-A4EA-4EBD-8180-ED9DC7F2408C}</msb:ProjectId>
+    <msb:ProjectId>{475219B6-A6BE-4C58-9A08-585EF0BDE843}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_725baf467f8f45a6b500fbc6ebf94eea.csproj" />
@@ -1030,7 +1013,137 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
                   name="BinaryCode"
                   state="cdata">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_725baf467f8f45a6b500fbc6ebf94eea.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAIW2tmAAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAALjEA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANwwAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAANBEAAAAgAAAAEgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAUAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAGgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAQ
+MQAAAAAAAEgAAAACAAUAjCEAAJgOAAABAAAAAAAAACQwAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioyAygSAAAKbwYAAAYqHgIoCgAA
+BioqAgMEBSgTAAAKKjoCFgOMEQAAASgUAAAKKloDLAgCFigVAAAKKnIBAABwcxYAAAp6HgIoFwAA
+CioeAigYAAAKKn4CKBkAAAoCAnMOAAAGfQEAAAQCAnMPAAAGfQIAAAQqkgRywAAAcBpvGgAACiwV
+AgUCAygbAAAKDgRzBQAABm8MAAAGKkorBwIDbw0AAAYDbwgAAAYt8SoGKjoCKBwAAAoCA30DAAAE
+KjoCKBwAAAoCA30EAAAEKh4CKBwAAAoqrn4FAAAELR5y1AAAcNAHAAACKB0AAApvHgAACnMfAAAK
+gAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcAAAQqHgIoIAAACioucxUAAAaABwAABCpCU0pC
+AQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAAkBQAAI34AAJAFAAAYBgAAI1N0cmluZ3MA
+AAAAqAsAAEgBAAAjVVMA8AwAABAAAAAjR1VJRAAAAAANAACYAQAAI0Jsb2IAAAAAAAAAAgAAAVcV
+oAEJAQAAAPoBMwAWAAABAAAAIAAAAAgAAAAHAAAAFgAAAA8AAAAgAAAAEAAAAAMAAAAFAAAABgAA
+AAEAAAAEAAAAAQAAAAAA+wIBAAAAAAAGAPUBTAQGAIkCTAQGAEEBOQQPAMAEAAAGAG4BjAMGANgB
+jAMGALkBjAMGAHACjAMGABUCjAMGAC4CjAMGAIUBjAMGAKABxAIKAEkCjgAKAAsEjgAOAPwDjgAK
+ANUDjgAGAEsARAMKAIYFjgAGAEkFRAMGACQBOQQGABwEbAQGAMkDdwMSAPQA5QISAFUB5QISANwA
+YgMGAAkBTAQGAJ4DRAMGAN4CRAMGALgDRAMGAK8ARAMGAGAARAMGAA8GjAMAAAAAAQAAAAAAAQAB
+AAEAEABXAwAAEAABAAEAAQAQAO0DAAA5AAEABQABABAAaAUAAEkAAQAKAAEAEAA9BQAATQADAA4A
+AQAQAP4EAABNAAQADwAAABAAcwTPBE0ABQAQAAABEAAtBc8EZQAHABQABgA9BWgABgD+BGwAAQB2
+BXAAAQB2BXAAEQBLA3QAEQDMAHgAEQBQAHwAUCAAAAAAxgCnAgYAAQBYIAAAAADGALICBgABAGAg
+AAAAAMYA6gWAAAEAbSAAAAAAhhgsBAYAAgB1IAAAAACGGCwEIAACAIAgAAAAAIYIPwCGAAUAjyAA
+AAAAhggjA4wABgCmIAAAAACGAAMGMAAHAK4gAAAAAIYAUAUwAAcAtiAAAAAAhhgsBAYABwDWIAAA
+AADGAN0FkQAHAPsgAAAAAMYB1AWAAAsADiEAAAAAxgHqBYAADAAQIQAAAACGGCwEmwANAB8hAAAA
+AIYYLASbAA4ALiEAAAAAgxgsBAYADwA2IQAAAACTCBgEoQAPAGIhAAAAAJMItACmAA8AaSEAAAAA
+kwjAAKsADwBxIQAAAACWCFwFsQAQAHghAAAAAIYYLAQGABAAgCEAAAAAkRgyBLYAEAAAAAEABwYA
+AAEAEQQAAAIACAUAAAMA4wMAAAEAvgIAAAEAvgIAAAEACgAAAAIAhAAAAAMAEQQAAAQA4wMAAAEA
+EQQAAAEABwYAAAEAjAUAAAEAjAUAAAEAvgIJACwEAQARACwEBgAZACwECgApACwEEAAxACwEEAA5
+ACwEEABBACwEEABJACwEEABRACwEEABZACwEEABhACwEEABpACwEBgChACwEBgDBACwEFQDRACwE
+BgCRAKcCBgCRALICBgCJAEgAGwBxACwEIABxADsDKgBxADMDAQDZACwEEABxAAMGMABxAFAFMACR
+ACwEBgDhADYFNACRABwFOwCZACwEBgDxAHIAQQDxAAsGSACpACwETgDJACwEBgAuAAsA0gAuABMA
+2wAuABsA+gAuACMAAwEuACsALAEuADMALAEuADsALAEuAEMAAwEuAEsAMgEuAFMALAEuAFsASQFD
+AGMAkwFpAHMA+gCJAHMA+gDhAHsAkwHjAGsAkwEDAAEABwADAAgABQAAAEsAugAAACcDvwAAABwE
+wwAAANQAyAAAAGAFzQABAAYAAwABAAcABQACABEABwACABIACQABABMACQACABQACwAEgAAAAQAA
+AAAAAAAAAAAAAAASAAAABAAAAAAAAAAAAAAAVgA2AAAAAAAPAAAAAAAAAAAAAABfAJYFAAAAAA8A
+AAAAAAAAAAAAAF8AswUAAAAABAAAAAAAAAAAAAAAVgBEAwAAAAAAAAAAAQAAAH0EAAAAAAA8TW9k
+dWxlPgBJbnB1dElEAFNDXzcyNWJhZjQ2N2Y4ZjQ1YTZiNTAwZmJjNmViZjk0ZWVhAG1zY29ybGli
+AHNldF9HdWlkAE5ld0d1aWQAZGVmYXVsdEluc3RhbmNlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5
+cGVGcm9tSGFuZGxlAElucHV0TmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBU
+eXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNl
+dHRpbmdzQmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0
+ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9y
+QnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1h
+cmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlv
+bkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhh
+dGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0
+QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5
+Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRl
+AFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAU3RyaW5nAFN5c3Rl
+bS5Db21wb25lbnRNb2RlbABTQ183MjViYWY0NjdmOGY0NWE2YjUwMGZiYzZlYmY5NGVlYS5kbGwA
+c2V0X0d1aWRfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlw
+dE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJl
+ZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1
+cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAEVudHJhZGEwQnVmZmVyAFBpcGVsaW5lQnVm
+ZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0ZW0u
+RGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3Vy
+Y2VzAFNDXzcyNWJhZjQ2N2Y4ZjQ1YTZiNTAwZmJjNmViZjk0ZWVhLlByb3BlcnRpZXMuUmVzb3Vy
+Y2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ183MjViYWY0NjdmOGY0NWE2YjUwMGZiYzZl
+YmY5NGVlYS5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVt
+bkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABn
+ZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQA
+TWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5l
+SG9zdABFbnRyYWRhMF9Qcm9jZXNzSW5wdXQARW50cmFkYTBfUHJvY2Vzc0lucHV0Um93AE5leHRS
+b3cAZ2V0X0Fzc2VtYmx5AACAvUwAYQAgAHAAcgBvAHAAaQBlAGQAYQBkACAASQBzAE4AdQBsAGwA
+IABuAG8AIABwAHUAZQBkAGUAIABlAHMAdABhAGIAbABlAGMAZQByAHMAZQAgAGUAbgAgAEYAYQBs
+AHMAZQAuACAARQBuACAAcwB1ACAAbAB1AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYA
+YQBsAG8AcgAgAGEAIABsAGEAIABjAG8AbAB1AG0AbgBhAC4AABNFAG4AdAByAGEAZABhACAAMAAA
+cVMAQwBfADcAMgA1AGIAYQBmADQANgA3AGYAOABmADQANQBhADYAYgA1ADAAMABmAGIAYwA2AGUA
+YgBmADkANABlAGUAYQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAA
+AACNLUuZeulxQY+LcacHBf/kAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdBAAAEUUJIAMBEj0d
+CBJBBSACAQgcAyAAAgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkI
+iYRdzYCAzJEDBhIUAwYSGAMGEkkDBhJVAwYSWQMGEiAFIAEBEgwFIAEBEUUEIAEBAgkgBAEIDhI9
+EkEFIAEBEkkEAAASVQQAABJZBQABARJZBAAAEiADAAABBCgAEUUDKAACBAgAElUECAASWQQIABIg
+CAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ183
+MjViYWY0NjdmOGY0NWE2YjUwMGZiYzZlYmY5NGVlYQAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAy
+MDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlO
+YW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3Vy
+Y2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5l
+dXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5S
+dW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAAQxAAAAAAAAAAAAAB4xAAAA
+IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQMQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUu
+ZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
+AEgAAABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
+bgAAAAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
+AAAAUwBDAF8ANwAyADUAYgBhAGYANAA2ADcAZgA4AGYANAA1AGEANgBiADUAMAAwAGYAYgBjADYA
+ZQBiAGYAOQA0AGUAZQBhAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
+ADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA3ADIANQBiAGEA
+ZgA0ADYANwBmADgAZgA0ADUAYQA2AGIANQAwADAAZgBiAGMANgBlAGIAZgA5ADQAZQBlAGEALgBk
+AGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcA
+aAB0ACAAQAAgACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBz
+AAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADcA
+MgA1AGIAYQBmADQANgA3AGYAOABmADQANQBhADYAYgA1ADAAMABmAGIAYwA2AGUAYgBmADkANABl
+AGUAYQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA3ADIA
+NQBiAGEAZgA0ADYANwBmADgAZgA0ADUAYQA2AGIANQAwADAAZgBiAGMANgBlAGIAZgA5ADQAZQBl
+AGEAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAA
+OAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAADAxAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
@@ -1065,7 +1178,7 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
                   dataType="System.String"
                   description="Suma de comprobación para comparar los metadatos del componente con los códigos compilados."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">4C</property>
+                  typeConverter="NOTBROWSABLE">AD</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -1075,15 +1188,6 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
                   refId="Package\Tarea Flujo de datos\Get Guid.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Get Guid.Inputs[Entrada 0].Columns[Region]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Region"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Region.Outputs[Salida de agregado 1].Columns[Region]" />
-                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -1095,9 +1199,7 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Get Guid.Outputs[Salida 0].Columns[Guid]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="guid"
                       lineageId="Package\Tarea Flujo de datos\Get Guid.Outputs[Salida 0].Columns[Guid]"
                       name="Guid" />
                   </outputColumns>
@@ -1433,14 +1535,22 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
         <NodeLayout
           Size="114,42"
           Id="Package\Tarea Flujo de datos\Region"
-          TopLeft="561,200" />
+          TopLeft="410,43" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Tarea Flujo de datos\Get Guid"
+          TopLeft="433,206" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\GROUP BY Region"
-          TopLeft="595,298" />
+          TopLeft="444,141" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
+          TopLeft="431,286" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-          TopLeft="618,242">
+          TopLeft="467,85">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1472,17 +1582,9 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
-          TopLeft="586,424" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Tarea Flujo de datos\Get Guid"
-          TopLeft="584,363" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
-          TopLeft="682.5,340">
+          TopLeft="531.5,183">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1516,24 +1618,30 @@ namespace SC_725baf467f8f45a6b500fbc6ebf94eea.Properties {
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
-          TopLeft="707,384">
+          TopLeft="494.5,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-33.5,40"
+              EndConnector="24,38"
               Start="0,0"
-              End="-33.5,32.5">
+              End="24,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-29.5,0" />
+                    End="0,15" />
                   <mssgle:CubicBezierSegment
-                    Point1="-29.5,0"
-                    Point2="-33.5,0"
-                    Point3="-33.5,4" />
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
                   <mssgle:LineSegment
-                    End="-33.5,32.5" />
+                    End="20,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,19"
+                    Point2="24,19"
+                    Point3="24,23" />
+                  <mssgle:LineSegment
+                    End="24,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

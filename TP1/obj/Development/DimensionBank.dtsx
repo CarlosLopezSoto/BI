@@ -11,339 +11,21 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimensionBank"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{BE5F4B7E-8BFA-4EF2-97C5-895D66B8A531}">
+  DTS:VersionBuild="98"
+  DTS:VersionGUID="{455DAEB9-7409-4D5A-81B9-0126B569B470}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{DA4FE2DE-1588-41E4-89C8-3CDF196708B7}"
-      DTS:ObjectName="Administrador de conexiones de archivos planos">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\trans.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;trans_id&quot;"
-              DTS:DTSID="{B67D275A-40F8-4BBE-AC5E-3999A236A41C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;account_id&quot;"
-              DTS:DTSID="{41736EDD-F847-4B0B-9452-80059DC441B2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;date&quot;"
-              DTS:DTSID="{1D6F2B45-08C2-4C13-B6F6-6C435E4F7708}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;type&quot;"
-              DTS:DTSID="{597B056F-FCD8-4351-84C1-5BACD2D3FBB3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;operation&quot;"
-              DTS:DTSID="{2BC27EC6-6C5E-4E41-B3C3-A9B1B488A774}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;amount&quot;"
-              DTS:DTSID="{3FD693C5-FA54-453B-81E2-E7DEAF060671}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;balance&quot;"
-              DTS:DTSID="{295E8502-A1EC-43E9-B500-9517E63FD2F1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;k_symbol&quot;"
-              DTS:DTSID="{718B2FE1-C7B4-4FB7-93C5-23818E466762}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;bank&quot;"
-              DTS:DTSID="{715378A4-9C2F-440D-AA3B-ACEA5FDD3593}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;account&quot;"
-              DTS:DTSID="{66ED736C-F70E-43FD-93BB-91D636F0B942}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{51657700-65FF-4145-B620-C9166C2A0B79}"
-      DTS:ObjectName="Administrador de conexiones de archivos planos 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\TEST2.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DateTo"
-              DTS:DTSID="{9BAA841C-C332-422E-AFB3-A630206E1E6A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="128"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="bank"
-              DTS:DTSID="{339997F7-06E7-49EC-87EA-79AB6D9A9C5F}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Date]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{51284E20-9676-4327-8D71-29CBB57F6157}"
-      DTS:ObjectName="Date">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\TEST2.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="128"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="bank"
-              DTS:DTSID="{62AA42DA-F652-4C28-85CF-0CCE6A74D554}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="dateTo"
-              DTS:DTSID="{71B53D7B-E7EF-44DB-969D-D4196063B66D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="dateFrom"
-              DTS:DTSID="{451D5780-5708-4E13-8E18-68CE79B376D0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Columna derivada 1"
-              DTS:DTSID="{F382D94C-1C44-477A-B212-0779428A4595}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-KGSM30P.TP1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{5E1B146E-A48E-4F5F-A0B3-2B6863C389F5}"
-      DTS:ObjectName="DESKTOP-KGSM30P.TP1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-KGSM30P;Initial Catalog=TP1;Integrated Security=True;Application Name=SSIS-Package-{5E1B146E-A48E-4F5F-A0B3-2B6863C389F5}DESKTOP-KGSM30P.TP1;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[desktop-kgsm30p.TP11]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{B1B7C015-940B-47E7-BEA8-C7E03B610FF1}"
+      DTS:DTSID="{4091B02F-C562-4DC5-927F-8D3C204F7092}"
       DTS:ObjectName="desktop-kgsm30p.TP11">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=desktop-kgsm30p;Initial Catalog=TP1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[desktop-kgsm30p.TP11 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{7BDD6CE0-8E9B-4DE2-AABE-93E23C4B411A}"
-      DTS:ObjectName="desktop-kgsm30p.TP11 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=desktop-kgsm30p;Initial Catalog=TP1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[desktop-kgsm30p.TP11 2]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{A6828FC1-D48F-487D-8442-31C2F5563C38}"
-      DTS:ObjectName="desktop-kgsm30p.TP11 2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=desktop-kgsm30p;Initial Catalog=TP1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[desktop-kgsm30p.TP11 3]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{74C4D0D6-CAF3-4395-9F1B-421AD1388657}"
-      DTS:ObjectName="desktop-kgsm30p.TP11 3">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=desktop-kgsm30p;Initial Catalog=TP1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Ordenes]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{2148B9CC-A1C7-4208-884F-9EC63C0A00DA}"
-      DTS:ObjectName="Ordenes">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\order.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;order_id&quot;"
-              DTS:DTSID="{F40029FD-A77B-4187-96E9-F567CBBC234A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;account_id&quot;"
-              DTS:DTSID="{904E68FD-EBAF-476F-956E-BC93113291CC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;bank_to&quot;"
-              DTS:DTSID="{7D2D6DF7-770E-4465-A5A4-5BE6EB7C5921}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;account_to&quot;"
-              DTS:DTSID="{98C1748F-02B8-4F23-A592-E408B2736EA2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;amount&quot;"
-              DTS:DTSID="{57B4709C-827D-4618-B03E-EAC3E446DC1F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;k_symbol&quot;"
-              DTS:DTSID="{C1B52A8B-EA75-4DC5-8DCD-E5113C57BC69}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -421,357 +103,9 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Test]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{D5FE9124-819B-43D0-971F-FD0BFB84FBC2}"
-      DTS:ObjectName="Test">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\test.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;bank&quot;"
-              DTS:DTSID="{E84369C2-CA04-42FB-9462-68B0B26D43D8}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[TEST2]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{6301B5AD-EC3C-4E0E-821F-7D9F5D29A79B}"
-      DTS:ObjectName="TEST2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\TEST2.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;bank&quot;"
-              DTS:DTSID="{D106AE18-F044-4433-9767-A14F1AD1BB9A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="4"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Symbol"
-              DTS:DTSID="{74C6E634-7B6D-4FBA-A060-D01D389C5164}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[TEST3]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{37D417EC-E652-4776-AAEE-02887958857F}"
-      DTS:ObjectName="TEST3">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\TEST2.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Symbol"
-              DTS:DTSID="{C6BD0B84-2501-49A2-8929-C7837B03AEC3}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[TEST5]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{B3F6B088-F390-4DC9-BD2F-F594C0A176A5}"
-      DTS:ObjectName="TEST5">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\Desktop\TEST2.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="128"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Término"
-              DTS:DTSID="{FC7B7820-854F-42B9-BC5B-833B8519494B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="21"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SUM"
-              DTS:DTSID="{092BC0EA-1D7F-4F46-BAD9-55470C4493B0}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Trans]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FDDA51EE-6BB4-47D9-A29B-B83831268E48}"
-      DTS:ObjectName="Trans">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\trans.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;trans_id&quot;"
-              DTS:DTSID="{B5E6E6F3-85EC-4A80-B87E-6EC666BB9772}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;account_id&quot;"
-              DTS:DTSID="{0EBDE4A9-30B9-45C1-A4E0-124B0DEB41D3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;date&quot;"
-              DTS:DTSID="{050DBA7C-685F-432E-BADC-3D913BBC5D8D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;type&quot;"
-              DTS:DTSID="{C02945AB-E004-41CE-A354-796748716FDC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;operation&quot;"
-              DTS:DTSID="{EEA65F12-B14C-4A33-AC8F-D48D4634F77D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;amount&quot;"
-              DTS:DTSID="{E59CE2D1-C187-45E5-A0EA-9381300E84DB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;balance&quot;"
-              DTS:DTSID="{CC658E2E-85A7-4D75-8DCF-CD2FA5D14EFD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;k_symbol&quot;"
-              DTS:DTSID="{CE67D32B-A018-4967-B6F8-3D85965C4514}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:ObjectName="&quot;bank&quot;"
-              DTS:DTSID="{C6B037B5-845B-4970-A94B-F569132D06F2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;account&quot;"
-              DTS:DTSID="{7CAAE3F4-9921-4D02-86AD-AE7C2E6758E6}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Transactio]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FD26C152-3418-4FD7-8312-B554BCA7BE35}"
-      DTS:ObjectName="Transactio">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3082"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x0022_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrador\OneDrive - Facultad Regional Resistencia\UTN\5to Año\Inteligencia de Negocios\TP final parte 1\trans.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="trans_id"
-              DTS:DTSID="{21CDE519-D367-4B0E-B934-33F19CB6B6E6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="account_id"
-              DTS:DTSID="{B81A3553-32CE-48F5-B8E8-A06A978F096F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="date"
-              DTS:DTSID="{DBC0395F-38D9-4EFB-8E86-9397CFD7BC76}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="type"
-              DTS:DTSID="{4CE5D61B-7AD1-4ED6-836D-42206C74FE8A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="operation"
-              DTS:DTSID="{92935F7C-7458-45AD-B1F0-E320C1FB80B3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="amount"
-              DTS:DTSID="{1D491357-671F-4E53-A835-4ABE4D1E9BDA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="balance"
-              DTS:DTSID="{5D7106B7-CDD4-4FBD-B74C-7D2049CB2CCD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="k_symbol"
-              DTS:DTSID="{B5B57553-720F-4A10-9548-21DE7C17BCCA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="bank"
-              DTS:DTSID="{B6E47F37-F0D1-4081-9C48-750738F31814}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="account"
-              DTS:DTSID="{A5F7C453-EC7E-4DE2-90A8-B391BBF8CDB2}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Transaction]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{1F74FAAE-5026-4EC7-9547-5643F00FCE8A}"
+      DTS:DTSID="{C427C7F0-949B-4729-9DAE-B3158F91228A}"
       DTS:ObjectName="Transaction">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -791,7 +125,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="trans_id"
-              DTS:DTSID="{279BF582-7D7A-420A-9910-3F6B383A971A}"
+              DTS:DTSID="{249BF23B-D03A-4C3F-8935-0EDCCDD8234E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -800,7 +134,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="account_id"
-              DTS:DTSID="{E8329B61-FEA8-4DF7-89D3-1D9E00C12353}"
+              DTS:DTSID="{A7971D64-FD67-4542-AD60-6076912BE14A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -809,7 +143,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="date"
-              DTS:DTSID="{55EF709D-8D0D-429D-91F8-1A3BA7A7FE87}"
+              DTS:DTSID="{EEBD8123-00A4-46FC-9805-AA2E9BB5AA99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -818,7 +152,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="type"
-              DTS:DTSID="{58A09AAF-AFE0-4FC7-8FAE-D6EC29FC5C7C}"
+              DTS:DTSID="{5E398D20-7E2B-4ABB-86CB-C120E0D32AF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -827,7 +161,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="operation"
-              DTS:DTSID="{36C07A8B-A4EC-412A-B92A-745D8ED715BB}"
+              DTS:DTSID="{B7651EF3-14CD-455F-80EE-DB2DC7C08A9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -836,7 +170,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="amount"
-              DTS:DTSID="{E830EFB7-2D33-4FDC-BCB8-7F8F807AF7B2}"
+              DTS:DTSID="{AF4F4474-A7B4-4D3E-AB19-14084C59B280}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -845,7 +179,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="balance"
-              DTS:DTSID="{5FA939B9-7666-4F82-B3BB-B400DF872078}"
+              DTS:DTSID="{CE7B4E26-F26B-4D7D-A167-FEADEDCC4C5F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -854,15 +188,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="k_symbol"
-              DTS:DTSID="{A5185610-6F5D-4A06-A9AE-5883C1B60E05}"
+              DTS:DTSID="{207C23AA-98FA-42FC-B894-008DE49A2F0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
+              DTS:TextQualified="True"
               DTS:ObjectName="bank"
-              DTS:DTSID="{D0CDB46C-E997-43A6-B7DF-9844D37D6DAA}"
+              DTS:DTSID="{BEBC92BF-369C-4AD8-90AF-A5BFC3C3001C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -871,7 +206,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="account"
-              DTS:DTSID="{F2DAE720-41BF-4BDB-A914-6E5806107764}"
+              DTS:DTSID="{741C2885-FDE7-4B9F-8C22-3D2D39743962}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1782,11 +1117,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Dest Dimension Bank"
+              refId="Package\Tarea Flujo de datos\DimensionBank"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Dest Dimension Bank"
+              name="DimensionBank"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1839,64 +1174,61 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[desktop-kgsm30p.TP11 3]"
-                  connectionManagerRefId="Package.ConnectionManagers[desktop-kgsm30p.TP11 3]"
+                  refId="Package\Tarea Flujo de datos\DimensionBank.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[desktop-kgsm30p.TP11]"
+                  connectionManagerRefId="Package.ConnectionManagers[desktop-kgsm30p.TP11]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].Columns[dateFrom]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].Columns[dateFrom]"
                       cachedDataType="dbTimeStamp"
                       cachedName="dateFrom"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
-                      lineageId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[dateFrom]" />
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
+                      lineageId="Package\Tarea Flujo de datos\Get Dates.Outputs[Salida de columna derivada].Columns[dateFrom]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].Columns[bank]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].Columns[bank]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="bank"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[Symbol]"
-                      lineageId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[bank]" />
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[Symbol]"
+                      lineageId="Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1].Columns[bank]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].Columns[BankID]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].Columns[Guid]"
                       cachedDataType="guid"
-                      cachedName="BankID"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[BankID]"
-                      lineageId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[BankID]" />
+                      cachedName="Guid"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[BankID]"
+                      lineageId="Package\Tarea Flujo de datos\Add Guid column.Outputs[Salida 0].Columns[Guid]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[Symbol]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[Symbol]"
                       codePage="1252"
                       dataType="str"
                       length="4"
                       name="Symbol" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[BankID]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[BankID]"
                       codePage="1252"
                       dataType="str"
                       length="36"
                       name="BankID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateTO]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateTO]"
                       dataType="dbTimeStamp"
                       name="DateTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateFROM]"
                       dataType="dbTimeStamp"
                       name="DateFROM" />
                   </externalMetadataColumns>
@@ -1904,22 +1236,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimensionBank.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Dest Dimension Bank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\DimensionBank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Dest Dimension Bank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\DimensionBank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Dest Dimension Bank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\DimensionBank.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1956,13 +1288,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">#{Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1].Columns[bank]}</property>
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1].Columns[bank]}) ? "" : [TRIM](#{Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1].Columns[bank]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">bank</property>
+                          name="FriendlyExpression">ISNULL(bank) ? "" : TRIM(bank)</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2020,188 +1352,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\Tarea Flujo de datos\Get Dates.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Tarea Flujo de datos\Get Dates.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Get Not Null Order"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="División condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
-              description="Enruta filas de datos a diferentes salidas según el contenido de los datos. Se usan condiciones (expresiones de SSIS) para especificar las filas que se van a enrutar. Por ejemplo, se usa para separar los registros que deben limpiarse de los registros listos para ser cargados o para enrutar solamente un subconjunto de registros."
-              name="Get Not Null Order"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Get Not Null Order.Inputs[Entrada de división condicional]"
-                  description="Entrada en la transformación División condicional"
-                  name="Entrada de división condicional">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Get Not Null Order.Inputs[Entrada de división condicional].Columns[&quot;bank&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;bank&quot;"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[bank]"
-                  description="Salida 1 de la transformación División condicional"
-                  errorOrTruncationOperation="Cálculo"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="bank"
-                  synchronousInputId="Package\Tarea Flujo de datos\Get Not Null Order.Inputs[Entrada de división condicional]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
-                      name="Expression">!([ISNULL](#{Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1].Columns["bank"]}))</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
-                      expressionType="Notify"
-                      name="FriendlyExpression">!(ISNULL(["bank"]))</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[Salida predeterminada de división condicional]"
-                  description="Salida predeterminada de la transformación División condicional"
-                  exclusionGroup="1"
-                  name="Salida predeterminada de división condicional"
-                  synchronousInputId="Package\Tarea Flujo de datos\Get Not Null Order.Inputs[Entrada de división condicional]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[Salida de error de división condicional]"
-                  description="Salida de error de la transformación División condicional"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de división condicional"
-                  synchronousInputId="Package\Tarea Flujo de datos\Get Not Null Order.Inputs[Entrada de división condicional]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Get Not Null Trans"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="División condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
-              description="Enruta filas de datos a diferentes salidas según el contenido de los datos. Se usan condiciones (expresiones de SSIS) para especificar las filas que se van a enrutar. Por ejemplo, se usa para separar los registros que deben limpiarse de los registros listos para ser cargados o para enrutar solamente un subconjunto de registros."
-              name="Get Not Null Trans"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Get Not Null Trans.Inputs[Entrada de división condicional]"
-                  description="Entrada en la transformación División condicional"
-                  name="Entrada de división condicional">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Get Not Null Trans.Inputs[Entrada de división condicional].Columns[&quot;bank&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;bank&quot;"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Bank]"
-                  description="Salida 1 de la transformación División condicional"
-                  errorOrTruncationOperation="Cálculo"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Bank"
-                  synchronousInputId="Package\Tarea Flujo de datos\Get Not Null Trans.Inputs[Entrada de división condicional]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
-                      name="Expression">!([ISNULL](#{Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1].Columns["bank"]}))</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
-                      expressionType="Notify"
-                      name="FriendlyExpression">!(ISNULL(["bank"]))</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Salida predeterminada de división condicional]"
-                  description="Salida predeterminada de la transformación División condicional"
-                  exclusionGroup="1"
-                  name="Salida predeterminada de división condicional"
-                  synchronousInputId="Package\Tarea Flujo de datos\Get Not Null Trans.Inputs[Entrada de división condicional]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Salida de error de división condicional]"
-                  description="Salida de error de la transformación División condicional"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de división condicional"
-                  synchronousInputId="Package\Tarea Flujo de datos\Get Not Null Trans.Inputs[Entrada de división condicional]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2307,198 +1457,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\GROUP BY Order"
-              componentClassID="Microsoft.Aggregate"
-              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
-              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
-              name="GROUP BY Order"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
-                  name="KeyScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
-                  name="Keys" />
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
-                  name="CountDistinctScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
-                  name="CountDistinctKeys" />
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
-                  name="AutoExtendFactor">25</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\GROUP BY Order.Inputs[Entrada de agregado 1]"
-                  name="Entrada de agregado 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\GROUP BY Order.Inputs[Entrada de agregado 1].Columns[bank_to]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="bank_to"
-                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[bank_to]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1]"
-                  name="Salida de agregado 1">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
-                      name="KeyScale"
-                      typeConverter="KeyScaleType">0</property>
-                    <property
-                      dataType="System.Null"
-                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
-                      name="Keys" />
-                  </properties>
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]"
-                      name="&quot;bank&quot;">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el id. de la columna de entrada usada en la agregación."
-                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[bank_to]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el tipo de agregación."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación de cadenas."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\GROUP BY Trans"
-              componentClassID="Microsoft.Aggregate"
-              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
-              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
-              name="GROUP BY Trans"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
-                  name="KeyScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
-                  name="Keys" />
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
-                  name="CountDistinctScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
-                  name="CountDistinctKeys" />
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
-                  name="AutoExtendFactor">25</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\GROUP BY Trans.Inputs[Entrada de agregado 1]"
-                  name="Entrada de agregado 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\GROUP BY Trans.Inputs[Entrada de agregado 1].Columns[bank]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="bank"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[bank]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1]"
-                  name="Salida de agregado 1">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
-                      name="KeyScale"
-                      typeConverter="KeyScaleType">0</property>
-                    <property
-                      dataType="System.Null"
-                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
-                      name="Keys" />
-                  </properties>
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]"
-                      name="&quot;bank&quot;">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el id. de la columna de entrada usada en la agregación."
-                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[bank]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el tipo de agregación."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación de cadenas."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Tarea Flujo de datos\Join"
               componentClassID="Microsoft.Merge"
               contactInfo="Mezclar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
@@ -2511,13 +1469,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Entrada de Mezclar 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Join.Inputs[Entrada de Mezclar 1].Columns[&quot;bank&quot;]"
+                      refId="Package\Tarea Flujo de datos\Join.Inputs[Entrada de Mezclar 1].Columns[bank]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="&quot;bank&quot;"
+                      cachedName="bank"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Tarea Flujo de datos\Sort Trans.Outputs[Salida de ordenación].Columns[&quot;bank&quot;]">
+                      lineageId="Package\Tarea Flujo de datos\Sort Transaction.Outputs[Salida de ordenación].Columns[bank]">
                       <properties>
                         <property
                           containsID="true"
@@ -2573,138 +1531,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Ordenar"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
-              name="Ordenar"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Ordenar.Inputs[Entrada de ordenación]"
-                  name="Entrada de ordenación">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Ordenar.Inputs[Entrada de ordenación].Columns[bank]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="bank"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1].Columns[bank]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Ordenar.Inputs[Entrada de ordenación].Columns[dateFrom]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="dateFrom"
-                      lineageId="Package\Tarea Flujo de datos\Get Dates.Outputs[Salida de columna derivada].Columns[dateFrom]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Ordenar.Inputs[Entrada de ordenación].Columns[Guid]"
-                      cachedDataType="guid"
-                      cachedName="Guid"
-                      lineageId="Package\Tarea Flujo de datos\Add Guid column.Outputs[Salida 0].Columns[Guid]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">3</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación]"
-                  isSorted="true"
-                  name="Salida de ordenación">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[bank]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[bank]"
-                      name="bank"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1].Columns[bank]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[dateFrom]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[dateFrom]"
-                      name="dateFrom"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Get Dates.Outputs[Salida de columna derivada].Columns[dateFrom]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[BankID]"
-                      dataType="guid"
-                      lineageId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación].Columns[BankID]"
-                      name="BankID"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Add Guid column.Outputs[Salida 0].Columns[Guid]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Tarea Flujo de datos\Order"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
@@ -2736,50 +1562,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Salida de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[order_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].ExternalColumns[order_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[order_id]"
-                      name="order_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].ExternalColumns[account_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[account_id]"
-                      name="account_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[bank_to]"
                       codePage="1252"
                       dataType="str"
@@ -2789,72 +1571,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       length="50"
                       lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[bank_to]"
                       name="bank_to"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[account_to]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].ExternalColumns[account_to]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[account_to]"
-                      name="account_to"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[amount]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[amount]"
-                      name="amount"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[k_symbol]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].ExternalColumns[k_symbol]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[k_symbol]"
-                      name="k_symbol"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2961,12 +1677,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Entrada de ordenación">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Order.Inputs[Entrada de ordenación].Columns[&quot;bank&quot;]"
+                      refId="Package\Tarea Flujo de datos\Sort Order.Inputs[Entrada de ordenación].Columns[bank_to]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="&quot;bank&quot;"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]">
+                      cachedName="bank_to"
+                      lineageId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[bank_to]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3001,7 +1717,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1].Columns["bank"]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano].Columns[bank_to]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3010,17 +1726,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Sort Trans"
+              refId="Package\Tarea Flujo de datos\Sort Transaction"
               componentClassID="Microsoft.Sort"
               contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
-              name="Sort Trans"
+              name="Sort Transaction"
               version="1">
               <properties>
                 <property
                   dataType="System.Boolean"
                   description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
-                  name="EliminateDuplicates">true</property>
+                  name="EliminateDuplicates">false</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
@@ -3029,16 +1745,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Sort Trans.Inputs[Entrada de ordenación]"
+                  refId="Package\Tarea Flujo de datos\Sort Transaction.Inputs[Entrada de ordenación]"
                   name="Entrada de ordenación">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Trans.Inputs[Entrada de ordenación].Columns[&quot;bank&quot;]"
+                      refId="Package\Tarea Flujo de datos\Sort Transaction.Inputs[Entrada de ordenación].Columns[bank]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="&quot;bank&quot;"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1].Columns[&quot;bank&quot;]">
+                      cachedName="bank"
+                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[bank]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3056,24 +1772,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Sort Trans.Outputs[Salida de ordenación]"
+                  refId="Package\Tarea Flujo de datos\Sort Transaction.Outputs[Salida de ordenación]"
                   isSorted="true"
                   name="Salida de ordenación">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Trans.Outputs[Salida de ordenación].Columns[&quot;bank&quot;]"
+                      refId="Package\Tarea Flujo de datos\Sort Transaction.Outputs[Salida de ordenación].Columns[bank]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort Trans.Outputs[Salida de ordenación].Columns[&quot;bank&quot;]"
-                      name="&quot;bank&quot;"
+                      lineageId="Package\Tarea Flujo de datos\Sort Transaction.Outputs[Salida de ordenación].Columns[bank]"
+                      name="bank"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1].Columns["bank"]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[bank]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3103,8 +1819,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\Transaction.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Transactio]"
-                  connectionManagerRefId="Package.ConnectionManagers[Transactio]"
+                  connectionManagerID="Package.ConnectionManagers[Transaction]"
+                  connectionManagerRefId="Package.ConnectionManagers[Transaction]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -3112,182 +1828,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano]"
                   name="Salida de origen de archivo plano">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[trans_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[trans_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[trans_id]"
-                      name="trans_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[account_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[account_id]"
-                      name="account_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[date]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[date]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[date]"
-                      name="date"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[type]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[type]"
-                      name="type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[operation]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[operation]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[operation]"
-                      name="operation"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[amount]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[amount]"
-                      name="amount"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[balance]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[balance]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[balance]"
-                      name="balance"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[k_symbol]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[k_symbol]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[k_symbol]"
-                      name="k_symbol"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[bank]"
                       codePage="1252"
@@ -3298,28 +1838,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       length="50"
                       lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[bank]"
                       name="bank"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[account]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].ExternalColumns[account]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano].Columns[account]"
-                      name="account"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3429,18 +1947,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </components>
           <paths>
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Bank]"
-              endId="Package\Tarea Flujo de datos\Sort Trans.Inputs[Entrada de ordenación]"
-              name="Bank"
-              startId="Package\Tarea Flujo de datos\Get Not Null Trans.Outputs[Bank]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[bank]"
-              endId="Package\Tarea Flujo de datos\Sort Order.Inputs[Entrada de ordenación]"
-              name="bank"
-              startId="Package\Tarea Flujo de datos\Get Not Null Order.Outputs[bank]" />
-            <path
               refId="Package\Tarea Flujo de datos.Paths[Salida 0]"
-              endId="Package\Tarea Flujo de datos\Ordenar.Inputs[Entrada de ordenación]"
+              endId="Package\Tarea Flujo de datos\DimensionBank.Inputs[Entrada de destino de OLE DB]"
               name="Salida 0"
               startId="Package\Tarea Flujo de datos\Add Guid column.Outputs[Salida 0]" />
             <path
@@ -3448,16 +1956,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               endId="Package\Tarea Flujo de datos\Get Dates.Inputs[Entrada de columna derivada]"
               name="Salida de agregado 1"
               startId="Package\Tarea Flujo de datos\GROUP BY bank.Outputs[Salida de agregado 1]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de agregado 11]"
-              endId="Package\Tarea Flujo de datos\Get Not Null Trans.Inputs[Entrada de división condicional]"
-              name="Salida de agregado 1"
-              startId="Package\Tarea Flujo de datos\GROUP BY Trans.Outputs[Salida de agregado 1]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de agregado 12]"
-              endId="Package\Tarea Flujo de datos\Get Not Null Order.Inputs[Entrada de división condicional]"
-              name="Salida de agregado 1"
-              startId="Package\Tarea Flujo de datos\GROUP BY Order.Outputs[Salida de agregado 1]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
               endId="Package\Tarea Flujo de datos\Add Guid column.Inputs[Entrada 0]"
@@ -3472,25 +1970,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
               endId="Package\Tarea Flujo de datos\Join.Inputs[Entrada de Mezclar 1]"
               name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Sort Trans.Outputs[Salida de ordenación]" />
+              startId="Package\Tarea Flujo de datos\Sort Transaction.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
               endId="Package\Tarea Flujo de datos\Join.Inputs[Entrada de Mezclar 2]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Sort Order.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
-              endId="Package\Tarea Flujo de datos\Dest Dimension Bank.Inputs[Entrada de destino de OLE DB]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación]" />
-            <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-              endId="Package\Tarea Flujo de datos\GROUP BY Order.Inputs[Entrada de agregado 1]"
+              endId="Package\Tarea Flujo de datos\Sort Order.Inputs[Entrada de ordenación]"
               name="Salida de origen de archivo plano"
               startId="Package\Tarea Flujo de datos\Order.Outputs[Salida de origen de archivo plano]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano1]"
-              endId="Package\Tarea Flujo de datos\GROUP BY Trans.Inputs[Entrada de agregado 1]"
+              endId="Package\Tarea Flujo de datos\Sort Transaction.Inputs[Entrada de ordenación]"
               name="Salida de origen de archivo plano"
               startId="Package\Tarea Flujo de datos\Transaction.Outputs[Salida de origen de archivo plano]" />
           </paths>
@@ -3521,239 +2014,69 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     design-time-name="Package\Tarea Flujo de datos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162,42"
-          Id="Package\Tarea Flujo de datos\GROUP BY Trans"
-          TopLeft="162.222215776091,131.444445489071" />
+          Size="99,42"
+          Id="Package\Tarea Flujo de datos\Join"
+          TopLeft="236,186" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Tarea Flujo de datos\Get Not Null Trans"
-          TopLeft="162.129623187177,181.807408852283" />
-        <NodeLayout
-          Size="119,42"
-          Id="Package\Tarea Flujo de datos\Ordenar"
-          TopLeft="641,408" />
+          Size="156,42"
+          Id="Package\Tarea Flujo de datos\DimensionBank"
+          TopLeft="562,311" />
         <NodeLayout
           Size="137,42"
           Id="Package\Tarea Flujo de datos\Transaction"
-          TopLeft="168.998312925717,54.5319867883601" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\Tarea Flujo de datos\Get Dates"
-          TopLeft="304.685179118021,404.44444765868" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Tarea Flujo de datos\GROUP BY Order"
-          TopLeft="386.044430757453,114.014815720923" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Tarea Flujo de datos\Dest Dimension Bank"
-          TopLeft="786.555530102166,408.333336570528" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Tarea Flujo de datos\Get Not Null Order"
-          TopLeft="382.777762567556,161.68148276641" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Tarea Flujo de datos\Join"
-          TopLeft="297.499988178412,324.133335909314" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Tarea Flujo de datos\Sort Trans"
-          TopLeft="147.28955867649,242.820875162971" />
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Tarea Flujo de datos\Order"
-          TopLeft="368.264312564257,45.9589226951449" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Tarea Flujo de datos\Add Guid column"
-          TopLeft="474.351833002804,405.888892114604" />
-        <NodeLayout
-          Size="127,42"
-          Id="Package\Tarea Flujo de datos\GROUP BY bank"
-          TopLeft="172.796311642652,404.703703868242" />
+          TopLeft="142.998312925717,24.5319867883601" />
         <NodeLayout
           Size="130,42"
           Id="Package\Tarea Flujo de datos\Sort Order"
-          TopLeft="405.41414289322,246.959595695569" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 11]"
-          TopLeft="162.222215776091,152.244445489071">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-0.0925925889131349,50.3629633632119"
-              Start="0,0"
-              End="-7.59259258891313,50.3629633632119">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5925925889131,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5925925889131,0"
-                    Point2="-22.5925925889131,0"
-                    Point3="-22.5925925889131,4" />
-                  <mssgle:LineSegment
-                    End="-22.5925925889131,46.3629633632119" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5925925889131,46.3629633632119"
-                    Point2="-22.5925925889131,50.3629633632119"
-                    Point3="-18.5925925889131,50.3629633632119" />
-                  <mssgle:LineSegment
-                    End="-7.59259258891313,50.3629633632119" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
-          TopLeft="236.396311642652,446.303703868242">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="123.755534142036,-0.259256209561499"
-              Start="0,0"
-              End="123.755534142036,7.2407437904385">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="119.755534142036,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="119.755534142036,22.5"
-                    Point2="123.755534142036,22.5"
-                    Point3="123.755534142036,18.5" />
-                  <mssgle:LineSegment
-                    End="123.755534142036,7.2407437904385" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
-          TopLeft="578.351833002804,405.888892114604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="122.148166997196,2.111107885396"
-              Start="0,0"
-              End="122.148166997196,-5.388892114604">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-18.5"
-                    Point2="0,-22.5"
-                    Point3="4,-22.5" />
-                  <mssgle:LineSegment
-                    End="118.148166997196,-22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="118.148166997196,-22.5"
-                    Point2="122.148166997196,-22.5"
-                    Point3="122.148166997196,-18.5" />
-                  <mssgle:LineSegment
-                    End="122.148166997196,-5.388892114604" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[bank]"
-          TopLeft="471.095952730388,203.28148276641">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.678112929159"
-              Start="0,0"
-              End="0,36.178112929159">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.178112929159" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-11.4407421875,13.2145447458295,22.881484375,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Bank]"
-          TopLeft="331.729623187177,202.607408852283">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="2.75993548931291,61.0134663106882"
-              Start="0,0"
-              End="10.2599354893129,61.0134663106882">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="21.2599354893129,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.2599354893129,0"
-                    Point2="25.2599354893129,0"
-                    Point3="25.2599354893129,4" />
-                  <mssgle:LineSegment
-                    End="25.2599354893129,57.0134663106882" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.2599354893129,57.0134663106882"
-                    Point2="25.2599354893129,61.0134663106882"
-                    Point3="21.2599354893129,61.0134663106882" />
-                  <mssgle:LineSegment
-                    End="10.2599354893129,61.0134663106882" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="13.6758143955629,-15.7490234375,23.1682421875,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="345.41414289322,100.959595695569" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Tarea Flujo de datos\Sort Transaction"
+          TopLeft="158,99" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Tarea Flujo de datos\Get Dates"
+          TopLeft="379.685179118021,276.44444765868" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Tarea Flujo de datos\Add Guid column"
+          TopLeft="518.351833002804,200.888892114604" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Tarea Flujo de datos\Order"
+          TopLeft="305.264312564257,27.9589226951449" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Tarea Flujo de datos\GROUP BY bank"
+          TopLeft="158.796311642652,321.703703868242" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano1]"
-          TopLeft="240.410264350904,96.1319867883601">
+          TopLeft="211.498312925717,66.5319867883601">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.312458700711"
+              EndConnector="26.501687074283,32.4680132116399"
               Start="0,0"
-              End="0,27.812458700711">
+              End="26.501687074283,24.9680132116399">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.812458700711" />
+                    End="0,12.2340066058199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.2340066058199"
+                    Point2="0,16.23400660582"
+                    Point3="4,16.23400660582" />
+                  <mssgle:LineSegment
+                    End="22.501687074283,16.23400660582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.501687074283,16.23400660582"
+                    Point2="26.501687074283,16.23400660582"
+                    Point3="26.501687074283,20.23400660582" />
+                  <mssgle:LineSegment
+                    End="26.501687074283,24.9680132116399" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3764,40 +2087,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-          TopLeft="469.554371660855,87.5589226951449">
+          TopLeft="358.764312564257,69.9589226951449">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.4558930257783"
+              EndConnector="51.649830328963,31.0006730004241"
               Start="0,0"
-              End="0,18.9558930257783">
+              End="51.649830328963,23.5006730004241">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.9558930257783" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
-          TopLeft="760,429.166668285264">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26.5555301021659,0"
-              Start="0,0"
-              End="19.0555301021659,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="0,11.500336500212" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.500336500212"
+                    Point2="0,15.500336500212"
+                    Point3="4,15.500336500212" />
                   <mssgle:LineSegment
-                    End="19.0555301021659,0" />
+                    End="47.649830328963,15.500336500212" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.649830328963,15.500336500212"
+                    Point2="51.649830328963,15.500336500212"
+                    Point3="51.649830328963,19.500336500212" />
+                  <mssgle:LineSegment
+                    End="51.649830328963,23.5006730004241" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3808,30 +2121,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
-          TopLeft="470.21414289322,289.359595695569">
+          TopLeft="410.41414289322,142.959595695569">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-97.2474880481413,34.7737402137445"
+              EndConnector="-109.747476226553,43.040404304431"
               Start="0,0"
-              End="-97.2474880481413,27.2737402137445">
+              End="-109.747476226553,35.540404304431">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.578432564846" />
+                    End="0,21.4135190425765" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.578432564846"
-                    Point2="0,20.578432564846"
-                    Point3="-4,20.578432564846" />
+                    Point1="0,21.4135190425765"
+                    Point2="0,25.4135190425765"
+                    Point3="-4,25.4135190425765" />
                   <mssgle:LineSegment
-                    End="-93.2474880481413,20.578432564846" />
+                    End="-105.747476226553,25.4135190425765" />
                   <mssgle:CubicBezierSegment
-                    Point1="-93.2474880481413,20.578432564846"
-                    Point2="-97.2474880481413,20.578432564846"
-                    Point3="-97.2474880481413,24.578432564846" />
+                    Point1="-105.747476226553,25.4135190425765"
+                    Point2="-109.747476226553,25.4135190425765"
+                    Point3="-109.747476226553,29.4135190425765" />
                   <mssgle:LineSegment
-                    End="-97.2474880481413,27.2737402137445" />
+                    End="-109.747476226553,35.540404304431" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3842,30 +2155,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-          TopLeft="240.88955867649,284.420875162971">
+          TopLeft="238,141">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.3437628352555,39.7124607463426"
+              EndConnector="32.3333333333333,45"
               Start="0,0"
-              End="96.3437628352555,32.2124607463426">
+              End="32.3333333333333,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5010726608493" />
+                    End="0,22.5705765407555" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.5010726608493"
-                    Point2="0,23.5010726608493"
-                    Point3="4,23.5010726608493" />
+                    Point1="0,22.5705765407555"
+                    Point2="0,26.5705765407555"
+                    Point3="4,26.5705765407555" />
                   <mssgle:LineSegment
-                    End="92.3437628352555,23.5010726608493" />
+                    End="28.3333333333333,26.5705765407555" />
                   <mssgle:CubicBezierSegment
-                    Point1="92.3437628352555,23.5010726608493"
-                    Point2="96.3437628352555,23.5010726608493"
-                    Point3="96.3437628352555,27.5010726608493" />
+                    Point1="28.3333333333333,26.5705765407555"
+                    Point2="32.3333333333333,26.5705765407555"
+                    Point3="32.3333333333333,30.5705765407555" />
                   <mssgle:LineSegment
-                    End="96.3437628352555,32.2124607463426" />
+                    End="32.3333333333333,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3876,30 +2189,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de Mezclar 1]"
-          TopLeft="355.099988178413,365.733335909314">
+          TopLeft="285.5,228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-118.703676535761,38.970367958928"
+              EndConnector="-63.203688357348,93.703703868242"
               Start="0,0"
-              End="-118.703676535761,31.470367958928">
+              End="-63.203688357348,86.203703868242">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.485183979464" />
+                    End="0,42.851851934121" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.485183979464"
-                    Point2="0,19.485183979464"
-                    Point3="-4,19.485183979464" />
+                    Point1="0,42.851851934121"
+                    Point2="0,46.851851934121"
+                    Point3="-4,46.851851934121" />
                   <mssgle:LineSegment
-                    End="-114.703676535761,19.485183979464" />
+                    End="-59.203688357348,46.851851934121" />
                   <mssgle:CubicBezierSegment
-                    Point1="-114.703676535761,19.485183979464"
-                    Point2="-118.703676535761,19.485183979464"
-                    Point3="-118.703676535761,23.485183979464" />
+                    Point1="-59.203688357348,46.851851934121"
+                    Point2="-63.203688357348,46.851851934121"
+                    Point3="-63.203688357348,50.851851934121" />
                   <mssgle:LineSegment
-                    End="-118.703676535761,31.470367958928" />
+                    End="-63.203688357348,86.203703868242" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3910,30 +2223,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="385.885179118021,404.44444765868">
+          TopLeft="443.685179118021,276.44444765868">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="167.666653884782,1.4444444559233"
+              EndConnector="153.666653884783,-33.555555544076"
               Start="0,0"
-              End="167.666653884782,-6.0555555440767">
+              End="153.666653884783,-26.055555544076">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-18.5" />
+                    End="0,-12.777777772038" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-18.5"
-                    Point2="0,-22.5"
-                    Point3="4,-22.5" />
+                    Point1="0,-12.777777772038"
+                    Point2="0,-16.777777772038"
+                    Point3="4,-16.777777772038" />
                   <mssgle:LineSegment
-                    End="163.666653884782,-22.5" />
+                    End="149.666653884783,-16.777777772038" />
                   <mssgle:CubicBezierSegment
-                    Point1="163.666653884782,-22.5"
-                    Point2="167.666653884782,-22.5"
-                    Point3="167.666653884782,-18.5" />
+                    Point1="149.666653884783,-16.777777772038"
+                    Point2="153.666653884783,-16.777777772038"
+                    Point3="153.666653884783,-20.777777772038" />
                   <mssgle:LineSegment
-                    End="167.666653884782,-6.0555555440767" />
+                    End="153.666653884783,-26.055555544076" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3943,31 +2256,65 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 12]"
-          TopLeft="386.044430757453,134.814815720923">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
+          TopLeft="285.796311642652,342.703703868242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-3.26666818989628,47.6666670454872"
+              EndConnector="93.888867475369,-45.259256209562"
               Start="0,0"
-              End="-10.7666681898963,47.6666670454872">
+              End="86.388867475369,-45.259256209562">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-21.7666681898963,0" />
+                    End="42.9444337376845,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-21.7666681898963,0"
-                    Point2="-25.7666681898963,0"
-                    Point3="-25.7666681898963,4" />
+                    Point1="42.9444337376845,0"
+                    Point2="46.9444337376845,0"
+                    Point3="46.9444337376845,-4" />
                   <mssgle:LineSegment
-                    End="-25.7666681898963,43.6666670454872" />
+                    End="46.9444337376845,-41.259256209562" />
                   <mssgle:CubicBezierSegment
-                    Point1="-25.7666681898963,43.6666670454872"
-                    Point2="-25.7666681898963,47.6666670454872"
-                    Point3="-21.7666681898963,47.6666670454872" />
+                    Point1="46.9444337376845,-41.259256209562"
+                    Point2="46.9444337376845,-45.259256209562"
+                    Point3="50.9444337376845,-45.259256209562" />
                   <mssgle:LineSegment
-                    End="-10.7666681898963,47.6666670454872" />
+                    End="86.388867475369,-45.259256209562" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida 0]"
+          TopLeft="622.351833002804,242.888892114604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.648166997196,68.111107885396"
+              Start="0,0"
+              End="17.648166997196,60.611107885396">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.654134028657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.654134028657"
+                    Point2="0,27.654134028657"
+                    Point3="4,27.654134028657" />
+                  <mssgle:LineSegment
+                    End="13.648166997196,27.654134028657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.648166997196,27.654134028657"
+                    Point2="17.648166997196,27.654134028657"
+                    Point3="17.648166997196,31.654134028657" />
+                  <mssgle:LineSegment
+                    End="17.648166997196,60.611107885396" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3980,7 +2327,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Dest Dimension Bank">
+    design-time-name="Package\Tarea Flujo de datos\DimensionBank">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

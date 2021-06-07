@@ -2,23 +2,83 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TP1</Name>
-    <LastWriteTime>2021-05-30T21:23:38.1186654Z</LastWriteTime>
+    <LastWriteTime>2021-06-07T21:46:13.473464Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimensionBank.dtsx</Name>
-      <LastWriteTime>2021-05-30T21:10:04.6828278Z</LastWriteTime>
+      <LastWriteTime>2021-06-07T20:49:30.0043051Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimensionDistrict.dtsx</Name>
-      <LastWriteTime>2021-05-30T21:23:38.0686968Z</LastWriteTime>
+      <LastWriteTime>2021-06-07T21:37:36.4012171Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimensionRegion.dtsx</Name>
-      <LastWriteTime>2021-05-30T21:23:38.0557043Z</LastWriteTime>
+      <LastWriteTime>2021-06-07T21:16:24.1469283Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionTransDetail.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:16:24.1319378Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionSymbolTrans.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:16:24.1189451Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionLoanDetail.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:16:24.102955Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionSymbolOrder.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:16:24.1609197Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionCustommer.dtsx</Name>
+      <LastWriteTime>2021-06-07T20:58:03.6559053Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionCard.dtsx</Name>
+      <LastWriteTime>2021-06-07T20:58:03.5040005Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionDate.dtsx</Name>
+      <LastWriteTime>2021-06-07T20:58:03.5219882Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionAccount.dtsx</Name>
+      <LastWriteTime>2021-06-07T20:47:33.6003626Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Init.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:16:24.2258792Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FactOrder.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:23:52.8103114Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FactLoan.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:16:24.0729745Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FacTransaction.dtsx</Name>
+      <LastWriteTime>2021-06-07T21:46:13.3125532Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
