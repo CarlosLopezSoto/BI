@@ -1,0 +1,3 @@
+"BankID","Symbol","DateFrom","DateTo"
+"{0A402584-F7F6-46A8-8969-3EA0968BECB3}            ","SIPO    ","2021-06-07 21:04:30.797",
+"{2FAD0DFC-70DF-496C-BAFF-FCA75BE41A94}            ","POJIST","",

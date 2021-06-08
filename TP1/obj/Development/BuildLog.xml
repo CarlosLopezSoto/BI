@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TP1</Name>
-    <LastWriteTime>2021-06-07T21:46:13.473464Z</LastWriteTime>
+    <LastWriteTime>2021-06-08T20:40:52.5223825Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -38,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimensionSymbolOrder.dtsx</Name>
-      <LastWriteTime>2021-06-07T21:16:24.1609197Z</LastWriteTime>
+      <LastWriteTime>2021-06-08T20:26:37.3605341Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -58,12 +58,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimensionAccount.dtsx</Name>
-      <LastWriteTime>2021-06-07T20:47:33.6003626Z</LastWriteTime>
+      <LastWriteTime>2021-06-08T00:19:05.7641923Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Init.dtsx</Name>
-      <LastWriteTime>2021-06-07T21:16:24.2258792Z</LastWriteTime>
+      <LastWriteTime>2021-06-08T00:19:05.7811821Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -79,6 +79,11 @@
     <ProjectBuildItemInfo>
       <Name>FacTransaction.dtsx</Name>
       <LastWriteTime>2021-06-08T00:04:15.1102548Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimensionSymbolOrderSCD.dtsx</Name>
+      <LastWriteTime>2021-06-08T21:08:45.768796Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
