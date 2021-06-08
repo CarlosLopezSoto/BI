@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{297E324E-0D5B-42EF-8101-E28A54DD8D78}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{85BAB486-7640-4E58-A6C6-D141F7029AE6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -231,6 +231,305 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Agregado"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Agregado"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[LoanDetailID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LoanDetailID"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[LoanDetailID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[client_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="client_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[client_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[district_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="district_id"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[district_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[account_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="account_id"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[account_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[Tot]"
+                      cachedDataType="r8"
+                      cachedName="Tot"
+                      lineageId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[Tot]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[DateID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DateID"
+                      lineageId="Package\Tarea Flujo de datos\Get Date ID.Outputs[Salida de entradas coincidentes de búsqueda].Columns[DateID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[payments]"
+                      cachedDataType="r8"
+                      cachedName="payments"
+                      lineageId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[payments]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[LoanDetailID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[LoanDetailID]"
+                      name="LoanDetailID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[LoanDetailID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[client_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[client_id]"
+                      name="client_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[client_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[district_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[district_id]"
+                      name="district_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[district_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[account_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[account_id]"
+                      name="account_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[account_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Tot]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Tot]"
+                      name="Tot">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[Tot]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[DateID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[DateID]"
+                      name="DateID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Get Date ID.Outputs[Salida de entradas coincidentes de búsqueda].Columns[DateID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[payments]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[payments]"
+                      name="payments">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[payments]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Tarea Flujo de datos\Client"
               componentClassID="Microsoft.FlatFileSource"
@@ -957,23 +1256,19 @@
                       cachedLength="50"
                       cachedName="LoanDetailID"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanDetailID]"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[LoanDetailID]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[LoanDetailID]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[amount]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="amount"
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tot]"
+                      cachedDataType="r8"
+                      cachedName="Tot"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[amount]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Tot]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[payments]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="r8"
                       cachedName="payments"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Payments]"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[payments]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[payments]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[DateID]"
                       cachedCodepage="1252"
@@ -981,7 +1276,7 @@
                       cachedLength="50"
                       cachedName="DateID"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[DateID]"
-                      lineageId="Package\Tarea Flujo de datos\Get Date ID.Outputs[Salida de entradas coincidentes de búsqueda].Columns[DateID]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[DateID]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[district_id]"
                       cachedCodepage="1252"
@@ -989,22 +1284,15 @@
                       cachedLength="50"
                       cachedName="district_id"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[DistrictID]"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[district_id]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Guid]"
-                      cachedDataType="guid"
-                      cachedName="Guid"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanID]"
-                      lineageId="Package\Tarea Flujo de datos\Get Columns Date.Outputs[Salida 0].Columns[Guid]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[district_id]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[client_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="client_id"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustommerID]"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[client_id]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[client_id]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[account_id]"
                       cachedCodepage="1252"
@@ -1012,7 +1300,7 @@
                       cachedLength="50"
                       cachedName="account_id"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AccountID]"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[account_id]" />
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[account_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1020,12 +1308,6 @@
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
                       dataType="r8"
                       name="Amount" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LoanID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="LoanID" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Payments]"
                       dataType="r8"
@@ -4031,6 +4313,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              localeId="1033"
               name="Tim Date ID"
               usesDispositions="true">
               <inputs>
@@ -4064,6 +4347,21 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
                           name="FriendlyExpression">TRIM(DateID)</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Tim Date ID.Inputs[Entrada de columna derivada].Columns[amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="amount"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[amount]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Tim Date ID.Inputs[Entrada de columna derivada].Columns[payment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="payments"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[payments]"
+                      name="payment" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4075,6 +4373,52 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
                   exclusionGroup="1"
                   name="Salida de columna derivada"
                   synchronousInputId="Package\Tarea Flujo de datos\Tim Date ID.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[Tot]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[Tot]"
+                      name="Tot"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_R8)#{Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[amount]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_R8)amount</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[payments]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada].Columns[payments]"
+                      name="payments"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_R8)#{Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[payments]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_R8)payment</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -4191,10 +4535,10 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               name="Salida 0"
               startId="Package\Tarea Flujo de datos\Get Columns Date.Outputs[Salida 0]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-              endId="Package\Tarea Flujo de datos\Get Loan ID.Inputs[Entrada de búsqueda]"
-              name="Salida de columna derivada"
-              startId="Package\Tarea Flujo de datos\Convert duration to int.Outputs[Salida de columna derivada]" />
+              refId="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
+              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de agregado 1"
+              startId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
               endId="Package\Tarea Flujo de datos\Ordenar 1.Inputs[Entrada de ordenación]"
@@ -4202,9 +4546,14 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               startId="Package\Tarea Flujo de datos\Trim Loan ID.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
-              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+              endId="Package\Tarea Flujo de datos\Get Loan ID.Inputs[Entrada de búsqueda]"
+              name="Salida de columna derivada"
+              startId="Package\Tarea Flujo de datos\Convert duration to int.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
               endId="Package\Tarea Flujo de datos\Ordenar 3.Inputs[Entrada de ordenación]"
@@ -4226,11 +4575,6 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Get Date ID.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 1.Outputs[Salida de ordenación]" />
-            <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
@@ -4245,6 +4589,11 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               endId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Ordenar 3.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\Tarea Flujo de datos\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
               endId="Package\Tarea Flujo de datos\Ordenar 2.Inputs[Entrada de ordenación]"
@@ -4344,7 +4693,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
         <NodeLayout
           Size="134,42"
           Id="Package\Tarea Flujo de datos\Tim Date ID"
-          TopLeft="832.499966919423,336.266669339073" />
+          TopLeft="704.499966919423,335.266669339073" />
         <NodeLayout
           Size="181,42"
           Id="Package\Tarea Flujo de datos\Convert duration to int"
@@ -4539,25 +4888,25 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
-          TopLeft="611.133314326075,358.366669349405">
+          TopLeft="611.333314326075,358.066669349405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="221.366652593348,0"
+              EndConnector="93.166652593348,0"
               Start="0,0"
-              End="213.866652593348,0">
+              End="85.666652593348,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="213.866652593348,0" />
+                    End="85.666652593348,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="7.11430285917412,5,199.638046875,12.1953125"
+              BoundingBox="-56.985697140826,5,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4657,40 +5006,6 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
                     Point3="-38.2140706206842,49.0000004339218" />
                   <mssgle:LineSegment
                     End="-73.533325154252,49.0000004339218" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
-          TopLeft="899.299966919423,377.866669339073">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50.0999987085662,72.8000009091703"
-              Start="0,0"
-              End="50.0999987085662,65.3000009091703">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.4000004545851" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.4000004545851"
-                    Point2="0,36.4000004545851"
-                    Point3="4,36.4000004545851" />
-                  <mssgle:LineSegment
-                    End="46.0999987085662,36.4000004545851" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.0999987085662,36.4000004545851"
-                    Point2="50.0999987085662,36.4000004545851"
-                    Point3="50.0999987085662,40.4000004545851" />
-                  <mssgle:LineSegment
-                    End="50.0999987085662,65.3000009091703" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4827,6 +5142,66 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="16.333328333166,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Tarea Flujo de datos\Agregado"
+          TopLeft="923,341" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
+          TopLeft="838.499966919423,359.133334669537">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.5000330805771,0"
+              Start="0,0"
+              End="77.0000330805771,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.0000330805771,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
+          TopLeft="986.5,383">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-37.00003437201,67.666670248244"
+              Start="0,0"
+              End="-37.00003437201,60.166670248244">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.833335124122" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.833335124122"
+                    Point2="0,33.833335124122"
+                    Point3="-4,33.833335124122" />
+                  <mssgle:LineSegment
+                    End="-33.00003437201,33.833335124122" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.00003437201,33.833335124122"
+                    Point2="-37.00003437201,33.833335124122"
+                    Point3="-37.00003437201,37.833335124122" />
+                  <mssgle:LineSegment
+                    End="-37.00003437201,60.166670248244" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

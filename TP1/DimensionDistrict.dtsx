@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{06732117-BC75-4318-A3FF-DB82D814B4D5}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{76293F33-B0F4-45C2-9EB2-BCDF42F6EF8B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2401,7 +2401,7 @@
         <NodeLayout
           Size="135,42"
           Id="Package\Tarea Flujo de datos\Sum Munip"
-          TopLeft="67,354" />
+          TopLeft="424,278" />
         <NodeLayout
           Size="113,42"
           Id="Package\Tarea Flujo de datos\District"
@@ -2409,37 +2409,25 @@
         <NodeLayout
           Size="165,42"
           Id="Package\Tarea Flujo de datos\DimensionDistrict"
-          TopLeft="59,425" />
+          TopLeft="416,349" />
         <NodeLayout
           Size="133,42"
           Id="Package\Tarea Flujo de datos\Sort Result"
           TopLeft="253,281" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-          TopLeft="319.5,323">
+          TopLeft="386,300.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-185,31"
+              EndConnector="38,0"
               Start="0,0"
-              End="-185,23.5">
+              End="30.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="-4,15.5" />
-                  <mssgle:LineSegment
-                    End="-181,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-181,15.5"
-                    Point2="-185,15.5"
-                    Point3="-185,19.5" />
-                  <mssgle:LineSegment
-                    End="-185,23.5" />
+                    End="30.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2450,7 +2438,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="138,396">
+          TopLeft="495,320">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
