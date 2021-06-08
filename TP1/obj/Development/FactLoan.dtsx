@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{0D33357B-8940-4ED3-A398-40C274BD6979}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{85BAB486-7640-4E58-A6C6-D141F7029AE6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4693,7 +4693,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
         <NodeLayout
           Size="134,42"
           Id="Package\Tarea Flujo de datos\Tim Date ID"
-          TopLeft="704.499966919423,336.266669339073" />
+          TopLeft="704.499966919423,335.266669339073" />
         <NodeLayout
           Size="181,42"
           Id="Package\Tarea Flujo de datos\Convert duration to int"
@@ -4888,7 +4888,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
-          TopLeft="611.333314326075,358.566669349405">
+          TopLeft="611.333314326075,358.066669349405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -5156,7 +5156,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           TopLeft="923,341" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
-          TopLeft="838.499966919423,359.633334669537">
+          TopLeft="838.499966919423,359.133334669537">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

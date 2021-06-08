@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{756D6213-7036-4883-86FD-793E8FB76D50}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{0C4F8FB3-6FBA-4508-A61D-74DD2F195C6B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1046,12 +1046,6 @@
                       externalMetadataColumnId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[TransDetailID]"
                       lineageId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[TransDetailID]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].Columns[Tot]"
-                      cachedDataType="r8"
-                      cachedName="Tot"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
-                      lineageId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[Tot]" />
-                    <inputColumn
                       refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].Columns[district_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1073,21 +1067,25 @@
                       cachedName="account_id"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[AccountID]"
                       lineageId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[account_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].Columns[Tot]"
+                      cachedDataType="r8"
+                      cachedName="Tot"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[SumAmount]"
+                      lineageId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[Tot]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].Columns[avgAmount]"
+                      cachedDataType="r8"
+                      cachedName="avgAmount"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[AvgAmount]"
+                      lineageId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[avgAmount]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
-                      dataType="r8"
-                      name="Amount" />
-                    <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[CountOfTransaction]"
                       dataType="i4"
                       name="CountOfTransaction" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[Balance]"
-                      dataType="r8"
-                      name="Balance" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[DistrictID]"
                       codePage="1252"
@@ -1124,6 +1122,14 @@
                       dataType="str"
                       length="50"
                       name="AccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[SumAmount]"
+                      dataType="r8"
+                      name="SumAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\FacTransaction.Inputs[Entrada de destino de OLE DB].ExternalColumns[AvgAmount]"
+                      dataType="r8"
+                      name="AvgAmount" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2576,6 +2582,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           description="Especifica el tipo de agregación."
                           name="AggregationType"
                           typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[avgAmount]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\GROUP BY.Outputs[Salida de agregado 1].Columns[avgAmount]"
+                      name="avgAmount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Convert to floar amount.Outputs[Salida de columna derivada].Columns[Tot]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
                         <property
                           dataType="System.Int32"
                           description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
@@ -7798,7 +7830,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         <NodeLayout
           Size="155,42"
           Id="Package\Tarea Flujo de datos\FacTransaction"
-          TopLeft="707,478" />
+          TopLeft="710,481" />
         <NodeLayout
           Size="104,42"
           Id="Package\Tarea Flujo de datos\Bank"
@@ -8699,18 +8731,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
-          TopLeft="631,497.5">
+          TopLeft="631,499">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="76,0"
+              EndConnector="79,0"
               Start="0,0"
-              End="68.5,0">
+              End="71.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="68.5,0" />
+                    End="71.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

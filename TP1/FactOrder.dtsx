@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{EA0F06EB-865A-4704-AC3B-ED23A2B3490F}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{02D0FF40-96A6-4467-9733-D753D10E24A8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -299,6 +299,13 @@
                       cachedDataType="r8"
                       cachedName="Tot"
                       lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Tot]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="amount"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Outputs[Salida de combinación de mezcla].Columns[amount]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -475,6 +482,110 @@
                           description="Especifica el tipo de agregación."
                           name="AggregationType"
                           typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[minAMOUNT]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[minAMOUNT]"
+                      name="minAMOUNT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Tot]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">6</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[MAXAmount]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[MAXAmount]"
+                      name="MAXAmount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Tot]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">7</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[avgAmount]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[avgAmount]"
+                      name="avgAmount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[Tot]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[count]"
+                      dataType="ui8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[count]"
+                      name="count">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Combinación de mezcla 3.Outputs[Salida de combinación de mezcla].Columns[amount]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
                         <property
                           dataType="System.Int32"
                           description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
@@ -1765,12 +1876,6 @@
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[BankID]"
                       lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[BankID]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tot]"
-                      cachedDataType="r8"
-                      cachedName="Tot"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
-                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Tot]" />
-                    <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[district_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1794,13 +1899,33 @@
                       cachedName="account_id"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AccountID]"
                       lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[account_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[avgAmount]"
+                      cachedDataType="r8"
+                      cachedName="avgAmount"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AvgAmount]"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[avgAmount]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[count]"
+                      cachedDataType="ui8"
+                      cachedName="count"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CountOfOrder]"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[count]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[minAMOUNT]"
+                      cachedDataType="r8"
+                      cachedName="minAMOUNT"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[MinAmount]"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[minAMOUNT]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[MAXAmount]"
+                      cachedDataType="r8"
+                      cachedName="MAXAmount"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[MaxAmount]"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[MAXAmount]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
-                      dataType="r8"
-                      name="Amount" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[DistrictID]"
                       codePage="1252"
@@ -1831,6 +1956,22 @@
                       dataType="str"
                       length="50"
                       name="AccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AvgAmount]"
+                      dataType="r8"
+                      name="AvgAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CountOfOrder]"
+                      dataType="i4"
+                      name="CountOfOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[MinAmount]"
+                      dataType="r8"
+                      name="MinAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[MaxAmount]"
+                      dataType="r8"
+                      name="MaxAmount" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
