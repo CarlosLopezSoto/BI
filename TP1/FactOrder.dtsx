@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{02D0FF40-96A6-4467-9733-D753D10E24A8}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{1349F05A-E46E-47E5-855C-501A060C3EB1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4525,22 +4526,22 @@
               name="Salida de agregado 1"
               startId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
               endId="Package\Tarea Flujo de datos\Ordenar 3.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Remove blank.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada3]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
               endId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
               endId="Package\Tarea Flujo de datos\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Trim Values.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada3]"
               endId="Package\Tarea Flujo de datos\Ordenar 2.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Trim Symbol Order ID.Outputs[Salida de columna derivada]" />
@@ -4566,44 +4567,44 @@
               startId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación7]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 4.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación5]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 7.Outputs[Salida de ordenación]" />
+              startId="Package\Tarea Flujo de datos\Ordenar 5.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación6]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 3.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 1.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 6.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Ordenar 2.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación4]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación5]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Ordenar 5.Outputs[Salida de ordenación]" />
+              startId="Package\Tarea Flujo de datos\Ordenar 6.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación4]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\Tarea Flujo de datos\Ordenar 1.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\Tarea Flujo de datos\Ordenar 7.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\Tarea Flujo de datos\Ordenar 4.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\Tarea Flujo de datos\Ordenar 3.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
               endId="Package\Tarea Flujo de datos\Ordenar.Inputs[Entrada de ordenación]"
@@ -4747,7 +4748,7 @@
           Id="Package\Tarea Flujo de datos\Ordenar"
           TopLeft="130.666670176718,16.6666660123401" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación4]"
           TopLeft="867.333321081265,50.8666659296883">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4781,7 +4782,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación5]"
           TopLeft="846.500004669027,337.533331859378">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4893,7 +4894,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
           TopLeft="167.499998311202,118.766665816042">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4915,7 +4916,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada3]"
           TopLeft="954.433331114712,115.166665795379">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4937,7 +4938,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
           TopLeft="765.599994635581,30.3333328925239">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5093,7 +5094,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación7]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
           TopLeft="229.66667872005,226.466664917204">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5127,7 +5128,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación6]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
           TopLeft="190.266670176718,58.2666660123401">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5161,7 +5162,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación5]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
           TopLeft="483.500004669028,394.533331859378">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5183,7 +5184,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación4]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación7]"
           TopLeft="1101.49998440345,224.866664896541">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5217,7 +5218,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación6]"
           TopLeft="1054.66664911641,137.799998904864">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5251,7 +5252,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
           TopLeft="73.8333470092873,142.399998925527">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5361,7 +5362,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada3]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
           TopLeft="704,485">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5398,7 +5399,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Symbo Order">
+    design-time-name="Package\Tarea Flujo de datos\Bank_to">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5424,7 +5425,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Bank_to">
+    design-time-name="Package\Tarea Flujo de datos\Symbo Order">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

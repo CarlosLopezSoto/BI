@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{85BAB486-7640-4E58-A6C6-D141F7029AE6}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{E19CF3E6-D63C-47B6-9940-B17D3FAF4BA8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4540,17 +4541,17 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               name="Salida de agregado 1"
               startId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
               endId="Package\Tarea Flujo de datos\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Trim Loan ID.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
               endId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Tim Date ID.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
               endId="Package\Tarea Flujo de datos\Get Loan ID.Inputs[Entrada de búsqueda]"
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Convert duration to int.Outputs[Salida de columna derivada]" />
@@ -4565,32 +4566,32 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
               name="Salida de combinación de mezcla"
               startId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
-              endId="Package\Tarea Flujo de datos\Trim Loan ID.Inputs[Entrada de columna derivada]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Get Loan ID.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
               endId="Package\Tarea Flujo de datos\Tim Date ID.Inputs[Entrada de columna derivada]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Get Date ID.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Trim Loan ID.Inputs[Entrada de columna derivada]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Get Loan ID.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Ordenar.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Ordenar 2.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Ordenar 3.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Ordenar 1.Outputs[Salida de ordenación]" />
@@ -4751,7 +4752,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
           TopLeft="658.233309657045,247.000001632373">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4785,7 +4786,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
           TopLeft="414.899985992909,242.666668264601">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4819,7 +4820,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
           TopLeft="653.46664534145,126.533334173626">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4853,7 +4854,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación3]"
           TopLeft="1021.56662855281,123.066667314106">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5015,7 +5016,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
           TopLeft="1007.53329604732,47.6666667148802">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5049,7 +5050,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
           TopLeft="509.966653586759,71.9333337397046">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5155,7 +5156,7 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
           Id="Package\Tarea Flujo de datos\Agregado"
           TopLeft="923,341" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada2]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
           TopLeft="838.499966919423,359.133334669537">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5214,6 +5215,19 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Get Loan ID">
     <Properties>
       <Property>
@@ -5256,19 +5270,6 @@ where [refTable].[Status] = ? and [refTable].[Duration] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

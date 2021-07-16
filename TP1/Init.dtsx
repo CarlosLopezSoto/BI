@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{63B49D53-39FA-4C35-A32E-C276B95C8533}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{16EA1AAE-6EFD-4A0C-9149-41D2B78FA15F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -444,6 +445,10 @@
           Id="Package\AddAccount"
           TopLeft="483,77" />
         <NodeLayout
+          Size="156,42"
+          Id="Package\AddAccountCard"
+          TopLeft="727,6" />
+        <NodeLayout
           Size="124,42"
           Id="Package\AddBank"
           TopLeft="716,167" />
@@ -704,6 +709,40 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 14]"
+          TopLeft="564,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="241,-141"
+              Start="0,0"
+              End="241,-133.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-66.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-66.5"
+                    Point2="0,-70.5"
+                    Point3="4,-70.5" />
+                  <mssgle:LineSegment
+                    End="237,-70.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="237,-70.5"
+                    Point2="241,-70.5"
+                    Point3="241,-74.5" />
+                  <mssgle:LineSegment
+                    End="241,-133.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="916,408">
           <EdgeLayout.Curve>
@@ -955,44 +994,6 @@
                     Point3="-13,-22.3592233009709" />
                   <mssgle:LineSegment
                     End="-13,-23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,42"
-          Id="Package\AddAccountCard"
-          TopLeft="727,6" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 14]"
-          TopLeft="564,189">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="241,-141"
-              Start="0,0"
-              End="241,-133.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-66.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-66.5"
-                    Point2="0,-70.5"
-                    Point3="4,-70.5" />
-                  <mssgle:LineSegment
-                    End="237,-70.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="237,-70.5"
-                    Point2="241,-70.5"
-                    Point3="241,-74.5" />
-                  <mssgle:LineSegment
-                    End="241,-133.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

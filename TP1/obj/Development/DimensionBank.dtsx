@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimensionBank"
   DTS:PackageType="5"
-  DTS:VersionBuild="98"
-  DTS:VersionGUID="{455DAEB9-7409-4D5A-81B9-0126B569B470}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{793CE892-5518-4AC6-B2A9-34AE83537C0F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2028,13 +2029,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\Tarea Flujo de datos\Transaction"
           TopLeft="142.998312925717,24.5319867883601" />
         <NodeLayout
+          Size="160,42"
+          Id="Package\Tarea Flujo de datos\Sort Transaction"
+          TopLeft="158,99" />
+        <NodeLayout
           Size="130,42"
           Id="Package\Tarea Flujo de datos\Sort Order"
           TopLeft="345.41414289322,100.959595695569" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Tarea Flujo de datos\Sort Transaction"
-          TopLeft="158,99" />
+          Size="107,42"
+          Id="Package\Tarea Flujo de datos\Order"
+          TopLeft="305.264312564257,27.9589226951449" />
         <NodeLayout
           Size="128,42"
           Id="Package\Tarea Flujo de datos\Get Dates"
@@ -2043,10 +2048,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Size="158,42"
           Id="Package\Tarea Flujo de datos\Add Guid column"
           TopLeft="518.351833002804,200.888892114604" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Tarea Flujo de datos\Order"
-          TopLeft="305.264312564257,27.9589226951449" />
         <NodeLayout
           Size="127,42"
           Id="Package\Tarea Flujo de datos\GROUP BY bank"
