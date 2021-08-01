@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{F31D03C4-5CA8-461C-8802-8CFCD9B11108}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{16EA1AAE-6EFD-4A0C-9149-41D2B78FA15F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -45,6 +46,23 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <PackageName>DimensionAccount.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\AddAccountCard"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Tarea Ejecutar paquete"
+      DTS:DTSID="{D7B9DB85-998B-4D5F-B0B9-963F8272BE9D}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AddAccountCard"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>FacAccountCard.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -284,7 +302,7 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F54FFE0F-FDF3-4C3B-8BDE-42ADCBB539A1}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="Delete FROM [dbo].FacTransaction&#xA;Delete FROM [dbo].FacLoan&#xA;Delete FROM [dbo].FacOrder&#xA;Delete FROM [dbo].DimensionCard&#xA;Delete FROM [dbo].DimensionAccount&#xA;Delete FROM [dbo].DimensionDate&#xA;Delete FROM [dbo].DimensionLoanDetail&#xA;Delete FROM [dbo].DimensionSymbolTrans&#xA;Delete FROM [dbo].DimensionTransDetail&#xA;Delete FROM [dbo].DimensionDistrict&#xA;Delete FROM [dbo].DimensionRegion&#xA;Delete FROM [dbo].DimensionCustommer&#xA;Delete FROM [dbo].DimensionSymbolOrder&#xA;Delete FROM [dbo].DimensionBank&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="Delete FROM [dbo].AccountCard&#xA;Delete FROM [dbo].FacTransaction&#xA;Delete FROM [dbo].FacLoan&#xA;Delete FROM [dbo].FacOrder&#xA;Delete FROM [dbo].DimensionCard&#xA;Delete FROM [dbo].DimensionAccount&#xA;Delete FROM [dbo].DimensionDate&#xA;Delete FROM [dbo].DimensionLoanDetail&#xA;Delete FROM [dbo].DimensionSymbolTrans&#xA;Delete FROM [dbo].DimensionTransDetail&#xA;Delete FROM [dbo].DimensionDistrict&#xA;Delete FROM [dbo].DimensionRegion&#xA;Delete FROM [dbo].DimensionCustommer&#xA;Delete FROM [dbo].DimensionSymbolOrder&#xA;Delete FROM [dbo].DimensionBank&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -337,6 +355,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 13"
       DTS:To="Package\AddBank" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 14]"
+      DTS:CreationName=""
+      DTS:DTSID="{48D86F70-E450-4776-83C0-2E4B4CE5BCA3}"
+      DTS:From="Package\AddTransaction"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 14"
+      DTS:To="Package\AddAccountCard" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
       DTS:CreationName=""
@@ -418,6 +444,10 @@
           Size="138,42"
           Id="Package\AddAccount"
           TopLeft="483,77" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\AddAccountCard"
+          TopLeft="727,6" />
         <NodeLayout
           Size="124,42"
           Id="Package\AddBank"
@@ -670,6 +700,40 @@
                     Point3="-53,-57.5" />
                   <mssgle:LineSegment
                     End="-53,-99.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 14]"
+          TopLeft="564,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="241,-141"
+              Start="0,0"
+              End="241,-133.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-66.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-66.5"
+                    Point2="0,-70.5"
+                    Point3="4,-70.5" />
+                  <mssgle:LineSegment
+                    End="237,-70.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="237,-70.5"
+                    Point2="241,-70.5"
+                    Point3="241,-74.5" />
+                  <mssgle:LineSegment
+                    End="241,-133.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

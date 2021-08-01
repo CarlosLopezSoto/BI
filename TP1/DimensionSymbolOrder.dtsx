@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{A4E4DA02-805C-4D01-AA44-AAC9620A4F80}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{97BE490E-FC50-4E26-91A1-D5EFF08CC21A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1582,10 +1583,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="159,42"
-          Id="Package\Tarea Flujo de datos\Remplace Blank"
-          TopLeft="465,72" />
-        <NodeLayout
           Size="107,42"
           Id="Package\Tarea Flujo de datos\Order"
           TopLeft="477,2" />
@@ -1594,6 +1591,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\Tarea Flujo de datos\DimensionSymbolOrder"
           TopLeft="468,364" />
         <NodeLayout
+          Size="159,42"
+          Id="Package\Tarea Flujo de datos\Remplace Blank"
+          TopLeft="465,72" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Tarea Flujo de datos\Get Date"
+          TopLeft="469,210" />
+        <NodeLayout
           Size="125,42"
           Id="Package\Tarea Flujo de datos\Add Guid"
           TopLeft="461,275" />
@@ -1601,10 +1606,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Size="162,42"
           Id="Package\Tarea Flujo de datos\Group by symbol"
           TopLeft="491,142" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Tarea Flujo de datos\Get Date"
-          TopLeft="469,210" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
           TopLeft="530.5,44">

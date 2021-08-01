@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{E4B4C3EF-1251-416F-B2DF-4661DC18BFFF}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{CFEF8E67-1A77-420B-B92C-ED1A0E204195}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1040,7 +1041,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="issued"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[issued]" />
+                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[issued]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1257,10 +1258,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="card_id"
-                      cachedSortKeyPosition="1"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[card_id]"
+                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[card_id]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -1268,7 +1268,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_STR,50,1252)#{Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[card_id]}</property>
+                          name="Expression">(DT_STR,50,1252)#{Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[card_id]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1394,7 +1394,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedLength="50"
                       cachedName="type"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[type]" />
+                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[type]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].Columns[IssueDate]"
                       cachedDataType="date"
@@ -1407,17 +1407,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="card_id"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].ExternalColumns[CardID]"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[card_id]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].Columns[account_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="account_id"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].ExternalColumns[AccountID]"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[account_id]" />
+                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[card_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1437,12 +1428,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsseDate]"
                       dataType="dbTimeStamp"
                       name="IsseDate" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimensionCard.Inputs[Entrada de destino de OLE DB].ExternalColumns[AccountID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="AccountID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1472,183 +1457,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Disp"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Origen de archivo plano"
-              localeId="3082"
-              name="Disp"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica si las columnas de longitud cero se tratan como NULL."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Tarea Flujo de datos\Disp.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Disp]"
-                  connectionManagerRefId="Package.ConnectionManagers[Disp]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano]"
-                  name="Salida de origen de archivo plano">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[disp_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[disp_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[disp_id]"
-                      name="disp_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[client_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[client_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[client_id]"
-                      name="client_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[account_id]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[account_id]"
-                      name="account_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[type]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[type]"
-                      name="type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si los datos están en formato binario."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[disp_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="disp_id" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[client_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="client_id" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="account_id" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="type" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de archivo plano">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Columna de salida de error de origen de archivo plano"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
-                      name="Columna de salida de error de origen de archivo plano" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Tarea Flujo de datos\Get cards without null and empty"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="División condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
@@ -1667,14 +1475,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="card_id"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[card_id]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Get cards without null and empty.Inputs[Entrada de división condicional].Columns[account_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="account_id"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[account_id]" />
+                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[card_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1694,13 +1495,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       containsID="true"
                       dataType="System.String"
                       description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
-                      name="Expression">![ISNULL](#{Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[card_id]}) &amp;&amp; ![ISNULL](#{Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[account_id]})</property>
+                      name="Expression">![ISNULL](#{Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[card_id]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
                       expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(card_id) &amp;&amp; !ISNULL(account_id)</property>
+                      name="FriendlyExpression">!ISNULL(card_id)</property>
                     <property
                       dataType="System.Int32"
                       description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
@@ -1741,181 +1542,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Tarea Flujo de datos\Get cards without null and empty.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Inner Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Combinación de mezcla;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Combina dos flujos de datos ordenados en uno solo mediante la combinación FULL, LEFT o INNER. Se recomienda esta transformación cuando se pueden ordenar los flujos de datos en sus orígenes."
-              name="Inner Join"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el tipo de combinación que se debe realizar."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número de columnas de la clave de ordenación."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si los valores NULL se tratan como valores iguales."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indica la cantidad máxima solicitada de búferes por entrada antes del bloqueo."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla]"
-                  hasSideEffects="true"
-                  name="Entrada izquierda de combinación de mezcla">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[disp_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="disp_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[disp_id]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[card_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="card_id"
-                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[card_id]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[issued]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="issued"
-                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[issued]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="type"
-                      lineageId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación].Columns[type]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada derecha de combinación de mezcla]"
-                  hasSideEffects="true"
-                  name="Entrada derecha de combinación de mezcla">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada derecha de combinación de mezcla].Columns[disp_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="disp_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[disp_id]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada derecha de combinación de mezcla].Columns[account_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="account_id"
-                      lineageId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[account_id]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla]"
-                  isSorted="true"
-                  name="Salida de combinación de mezcla">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[card_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[card_id]"
-                      name="card_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[card_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[issued]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[issued]"
-                      name="issued">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[issued]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[disp_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[disp_id]"
-                      name="disp_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[disp_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[type]"
-                      name="type">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla].Columns[type]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[account_id]"
-                      name="account_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada derecha de combinación de mezcla].Columns[account_id]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2092,353 +1718,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Sort Disp"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
-              name="Sort Disp"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Sort Disp.Inputs[Entrada de ordenación]"
-                  name="Entrada de ordenación">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Inputs[Entrada de ordenación].Columns[disp_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="disp_id"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[disp_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Inputs[Entrada de ordenación].Columns[client_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="client_id"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[client_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Inputs[Entrada de ordenación].Columns[account_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="account_id"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[account_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Inputs[Entrada de ordenación].Columns[type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="type"
-                      lineageId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[type]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación]"
-                  isSorted="true"
-                  name="Salida de ordenación">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[disp_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[disp_id]"
-                      name="disp_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[disp_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[client_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[client_id]"
-                      name="client_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[client_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[account_id]"
-                      name="account_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[account_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación].Columns[type]"
-                      name="type">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano].Columns[type]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Sort result"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
-              name="Sort result"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos\Sort result.Inputs[Entrada de ordenación]"
-                  name="Entrada de ordenación">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Inputs[Entrada de ordenación].Columns[card_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="card_id"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[card_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Inputs[Entrada de ordenación].Columns[issued]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="issued"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[issued]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Inputs[Entrada de ordenación].Columns[type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="type"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[type]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Inputs[Entrada de ordenación].Columns[account_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="account_id"
-                      lineageId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[account_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica las opciones de comparación para datos de caracteres."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Especifica el criterio de ordenación de la columna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación]"
-                  isSorted="true"
-                  name="Salida de ordenación">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[card_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[card_id]"
-                      name="card_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[card_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[issued]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[issued]"
-                      name="issued">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[issued]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[type]"
-                      name="type">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[type]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[account_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación].Columns[account_id]"
-                      name="account_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla].Columns[account_id]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\Tarea Flujo de datos.Paths[cards]"
-              endId="Package\Tarea Flujo de datos\Sort result.Inputs[Entrada de ordenación]"
+              endId="Package\Tarea Flujo de datos\Add Issue Date.Inputs[Entrada 0]"
               name="cards"
               startId="Package\Tarea Flujo de datos\Get cards without null and empty.Outputs[cards]" />
             <path
@@ -2452,35 +1736,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               name="Salida de columna derivada"
               startId="Package\Tarea Flujo de datos\Convert to str cardId.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
-              endId="Package\Tarea Flujo de datos\Get cards without null and empty.Inputs[Entrada de división condicional]"
-              name="Salida de combinación de mezcla"
-              startId="Package\Tarea Flujo de datos\Inner Join.Outputs[Salida de combinación de mezcla]" />
-            <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-              endId="Package\Tarea Flujo de datos\Add Issue Date.Inputs[Entrada 0]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Sort result.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
-              endId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada izquierda de combinación de mezcla]"
+              endId="Package\Tarea Flujo de datos\Get cards without null and empty.Inputs[Entrada de división condicional]"
               name="Salida de ordenación"
               startId="Package\Tarea Flujo de datos\Sort Card.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
-              endId="Package\Tarea Flujo de datos\Inner Join.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\Tarea Flujo de datos\Sort Disp.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
               endId="Package\Tarea Flujo de datos\Sort Card.Inputs[Entrada de ordenación]"
               name="Salida de origen de archivo plano"
               startId="Package\Tarea Flujo de datos\Card.Outputs[Salida de origen de archivo plano]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano1]"
-              endId="Package\Tarea Flujo de datos\Sort Disp.Inputs[Entrada de ordenación]"
-              name="Salida de origen de archivo plano"
-              startId="Package\Tarea Flujo de datos\Disp.Outputs[Salida de origen de archivo plano]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2509,72 +1773,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Tarea Flujo de datos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="101,42"
-          Id="Package\Tarea Flujo de datos\Disp"
-          TopLeft="225,40" />
-        <NodeLayout
-          Size="103,42"
-          Id="Package\Tarea Flujo de datos\Card"
-          TopLeft="27,41" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Tarea Flujo de datos\Convert to str cardId"
-          TopLeft="526,371" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Tarea Flujo de datos\Add Issue Date"
-          TopLeft="282,378" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="155,42"
           Id="Package\Tarea Flujo de datos\DimensionCard"
           TopLeft="778,370" />
         <NodeLayout
-          Size="239,42"
-          Id="Package\Tarea Flujo de datos\Get cards without null and empty"
-          TopLeft="40,293" />
-        <NodeLayout
           Size="126,42"
           Id="Package\Tarea Flujo de datos\Sort Card"
-          TopLeft="18,121" />
+          TopLeft="83,183" />
         <NodeLayout
-          Size="127,42"
-          Id="Package\Tarea Flujo de datos\Inner Join"
-          TopLeft="70,200" />
+          Size="178,42"
+          Id="Package\Tarea Flujo de datos\Convert to str cardId"
+          TopLeft="526,371" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Tarea Flujo de datos\Sort result"
-          TopLeft="109,378" />
+          Size="239,42"
+          Id="Package\Tarea Flujo de datos\Get cards without null and empty"
+          TopLeft="38,293" />
         <NodeLayout
-          Size="124,42"
-          Id="Package\Tarea Flujo de datos\Sort Disp"
-          TopLeft="218,119" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano1]"
-          TopLeft="277.75,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="154,42"
+          Id="Package\Tarea Flujo de datos\Add Issue Date"
+          TopLeft="282,378" />
+        <NodeLayout
+          Size="103,42"
+          Id="Package\Tarea Flujo de datos\Card"
+          TopLeft="92,103" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-          TopLeft="79.75,83">
+          TopLeft="144.75,145">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2595,121 +1821,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación2]"
-          TopLeft="280,161">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-126.666666666667,39"
-              Start="0,0"
-              End="-126.666666666667,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.1088646967341" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.1088646967341"
-                    Point2="0,23.1088646967341"
-                    Point3="-4,23.1088646967341" />
-                  <mssgle:LineSegment
-                    End="-122.666666666667,23.1088646967341" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-122.666666666667,23.1088646967341"
-                    Point2="-126.666666666667,23.1088646967341"
-                    Point3="-126.666666666667,27.1088646967341" />
-                  <mssgle:LineSegment
-                    End="-126.666666666667,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
-          TopLeft="81,163">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="32.6666666666667,37"
-              Start="0,0"
-              End="32.6666666666667,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.9237947122862" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.9237947122862"
-                    Point2="0,21.9237947122862"
-                    Point3="4,21.9237947122862" />
-                  <mssgle:LineSegment
-                    End="28.6666666666667,21.9237947122862" />
-                  <mssgle:CubicBezierSegment
-                    Point1="28.6666666666667,21.9237947122862"
-                    Point2="32.6666666666667,21.9237947122862"
-                    Point3="32.6666666666667,25.9237947122862" />
-                  <mssgle:LineSegment
-                    End="32.6666666666667,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-          TopLeft="238,399">
+          TopLeft="146,225">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="44,0"
+              EndConnector="11.5,68"
               Start="0,0"
-              End="36.5,0">
+              End="11.5,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="36.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
-          TopLeft="133.5,242">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26,51"
-              Start="0,0"
-              End="26,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
+                    End="0,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.5"
-                    Point2="0,25.5"
-                    Point3="4,25.5" />
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
                   <mssgle:LineSegment
-                    End="22,25.5" />
+                    End="7.5,34" />
                   <mssgle:CubicBezierSegment
-                    Point1="22,25.5"
-                    Point2="26,25.5"
-                    Point3="26,29.5" />
+                    Point1="7.5,34"
+                    Point2="11.5,34"
+                    Point3="11.5,38" />
                   <mssgle:LineSegment
-                    End="26,43.5" />
+                    End="11.5,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2764,13 +1900,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[cards]"
-          TopLeft="159.5,335">
+          TopLeft="157.5,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="14,43"
+              EndConnector="201.5,43"
               Start="0,0"
-              End="14,35.5">
+              End="201.5,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2781,20 +1917,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     Point2="0,21.5"
                     Point3="4,21.5" />
                   <mssgle:LineSegment
-                    End="10,21.5" />
+                    End="197.5,21.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="10,21.5"
-                    Point2="14,21.5"
-                    Point3="14,25.5" />
+                    Point1="197.5,21.5"
+                    Point2="201.5,21.5"
+                    Point3="201.5,25.5" />
                   <mssgle:LineSegment
-                    End="14,35.5" />
+                    End="201.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-5.4871875,26.5,24.974375,9.7490234375"
+              BoundingBox="88.2628125,26.5,24.974375,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

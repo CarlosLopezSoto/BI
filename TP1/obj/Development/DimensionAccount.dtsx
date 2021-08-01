@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{8DE0B6F8-A9A5-413E-8E4C-4A5AD5BDEAC7}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{11292654-2AAF-4CA2-A59D-D0D9875B2139}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1345,17 +1346,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="119,42"
-          Id="Package\Tarea Flujo de datos\Account"
-          TopLeft="337,21" />
+          Size="123,42"
+          Id="Package\Tarea Flujo de datos\Get Date"
+          TopLeft="338,87" />
         <NodeLayout
           Size="171,42"
           Id="Package\Tarea Flujo de datos\DimensionAccount"
           TopLeft="319,175" />
         <NodeLayout
-          Size="123,42"
-          Id="Package\Tarea Flujo de datos\Get Date"
-          TopLeft="338,87" />
+          Size="119,42"
+          Id="Package\Tarea Flujo de datos\Account"
+          TopLeft="337,21" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
           TopLeft="398,63">

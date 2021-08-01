@@ -11,8 +11,9 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{B76D6C4B-C28D-4C4E-B2EE-02C012C963D8}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{FF3B85E2-3FA3-4A23-A39E-A98A72E58D39}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1560,7 +1561,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\DimensonCustommer">
+    design-time-name="Package\Tarea Flujo de datos\Clients">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1573,7 +1574,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Clients">
+    design-time-name="Package\Tarea Flujo de datos\DimensonCustommer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
